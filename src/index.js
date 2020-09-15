@@ -26,23 +26,21 @@ const ReactiveButton = (props) => {
     }, [props.buttonState, props.messageDuration, props.autoHideMessage])
 
     return (
-        <React.Fragment>
-            <button
-                disabled={buttonState !== 'idle' || props.disabled}
-                type={type}
-                data-mode={mode}
-                data-size={size}
-                data-button-state={buttonState}
-                data-disabled={props.disabled}
-                data-rounded={rounded}
-                className={`${className}`}
-                onClick={props.onClick}
-                style={style}
-            >
-                <span className="progress"></span>
-                <span className="content" dangerouslySetInnerHTML={{ __html: buttonState === 'idle' ? idleLabel : (buttonState === 'loading' ? loadingLabel : (buttonState === 'success' ? successLabel : (buttonState === 'error' ? errorLabel : idleLabel))) }}></span>
-            </button>
-        </React.Fragment>
+        <button
+            disabled={buttonState !== 'idle' || props.disabled}
+            type={type}
+            data-mode={mode}
+            data-size={size}
+            data-button-state={buttonState}
+            data-disabled={props.disabled}
+            data-rounded={rounded}
+            className={`${className}`}
+            onClick={props.onClick}
+            style={style}
+        >
+            <span className="progress"></span>
+            <span className="content" dangerouslySetInnerHTML={{ __html: buttonState === 'idle' ? idleLabel : (buttonState === 'loading' ? loadingLabel : (buttonState === 'success' ? successLabel : (buttonState === 'error' ? errorLabel : idleLabel))) }}></span>
+        </button>
     )
 }
 

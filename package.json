@@ -1,9 +1,9 @@
 {
   "name": "reactive-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Button component that thinks like react",
   "main": "src/index.js",
-  "typings": "src/index.d.ts",
+  "typings": "dist/index.d.ts",
   "homepage": "https://github.com/arifszn/reactive-button.git",
   "keywords": [
     
