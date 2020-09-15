@@ -1,0 +1,31 @@
+{
+  "name": "reactive-button",
+  "version": "1.0.0",
+  "description": "Button component that thinks like react",
+  "main": "src/index.js",
+  "typings": "src/index.d.ts",
+  "homepage": "https://github.com/arifszn/reactive-button.git",
+  "keywords": [
+    
+  ],
+  "license": "MIT",
+  "author": "arifszn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arifszn/reactive-button.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arifszn/reactive-button/issues"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eject": "react-scripts eject"
+  }
+}
