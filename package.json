@@ -1,49 +1,48 @@
 {
   "name": "reactive-button",
-  "version": "1.0.7",
-  "private": false,
-  "description": "React Button component that thinks like react",
-  "main": "./dist/index.js",
+  "version": "1.0.9",
+  "description": "A React Button component that thinks like React",
+  "main": "./lib/index.js",
   "typings": "./index.d.ts",
-  "homepage": "https://github.com/arifszn/reactive-button.git",
+  "scripts": {
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "prop-types": "^15.0.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.12",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "css-loader": "^0.28.11",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^2.1.2",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arifszn/reactive-button.git"
+  },
   "keywords": [
     "react",
     "button",
-    "component"
+    "react-button"
   ],
-  "babel": {
-    "presets": [
-      "@babel/preset-react",
-      "minify"
-    ]
-  },
-  "license": "MIT",
   "author": "arifszn",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/arifszn/reactive-button.git"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/arifszn/reactive-button/issues"
   },
-  "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-preset-minify": "^0.5.1"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel ./src -d dist --copy-files",
-    "eject": "react-scripts eject"
-  }
+  "homepage": "https://github.com/arifszn/reactive-button#readme"
 }

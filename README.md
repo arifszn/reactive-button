@@ -52,8 +52,7 @@ function App() {
           outline={false} /* Default: false*/
           shadow={false} /* Default: false*/
           rounded={false} /* Default: false*/
-        ></ReactiveButton>
-      
+        />
   );
 }
 
