@@ -64,7 +64,7 @@ export default App;
 
 | Property            |  Type   | Description                                     | Default |
 | :-----------        | :---:   | :-------------------------------------          | :----:  |
-| buttonState                 | string     | Current button state    | 'idle'       |
+| buttonState                 | string     | Current button state    | idle       |
 | onClick        | function   | Button click event            | ()     |
 | color     | string   | Button color       | primary     |
 | type  | string | Button type submit or button   | button   |
