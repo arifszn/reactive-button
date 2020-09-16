@@ -1,6 +1,6 @@
 {
   "name": "reactive-button",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
   "description": "React Button component that thinks like react",
   "main": "./dist/index.js",
