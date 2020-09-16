@@ -10,14 +10,11 @@
 	--reactive-button-dark-color: rgba(66, 78, 106, 1);
 	--reactive-button-light-color: rgba(245, 245, 245, 1);
 	--reactive-button-green-color: rgba(52, 191, 163, 1);
-	--reactive-button-red-color: rgba(244, 81, 108, 1);
 
 	--reactive-progress-outline-primary-color: rgba(88, 103, 221, .3);
 	--reactive-progress-outline-dark-color: rgba(66, 78, 106, .3);
 	--reactive-progress-outline-light-color: rgba(245, 245, 245, .3);
 	--reactive-progress-outline-green-color: rgba(52, 191, 163, .3);
-	--reactive-progress-outline-red-color: rgba(244, 81, 108, .3);
-	
 }
 
 .reactive-btn {
@@ -302,38 +299,6 @@
 }
 
 /* green button ends */
-
-
-
-/* red button starts */
-.reactive-btn.red {
-	background: var(--reactive-button-red-color);
-}
-
-.reactive-btn.red.outline {
-	border-color: var(--reactive-button-red-color);
-	color: var(--reactive-button-red-color);
-	border: 1px solid var(--reactive-button-red-color);
-	box-shadow: inset 0 -1px 0 var(--reactive-button-red-color);
-	-webkit-box-shadow: inset 0 -1px 0 var(--reactive-button-red-color);
-	-moz-box-shadow: inset 0 -1px 0 var(--reactive-button-red-color);
-}
-
-.reactive-btn.red.outline .progress {
-	background-color: var(--reactive-progress-outline-red-color) !important;
-}
-
-.reactive-btn.red.outline:hover:not(:disabled):not(.disabled) {
-	box-shadow: inset 0 -3px 0 var(--reactive-button-red-color);
-	-webkit-box-shadow: inset 0 -3px 0 var(--reactive-button-red-color);
-	-moz-box-shadow: inset 0 -3px 0 var(--reactive-button-red-color);
-}
-
-.reactive-btn.red.shadow {
-	box-shadow: 0px 5px 16px -3px var(--reactive-button-red-color) !important;
-}
-
-/* red button ends */
 
 
 

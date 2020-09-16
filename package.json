@@ -1,13 +1,22 @@
 {
   "name": "reactive-button",
-  "version": "1.0.2",
-  "description": "Button component that thinks like react",
-  "main": "src/index.js",
-  "typings": "dist/index.d.ts",
+  "version": "1.0.6",
+  "private": false,
+  "description": "React Button component that thinks like react",
+  "main": "./dist/index.js",
+  "typings": "./index.d.ts",
   "homepage": "https://github.com/arifszn/reactive-button.git",
   "keywords": [
-    "react"
+    "react",
+    "button",
+    "component"
   ],
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "minify"
+    ]
+  },
   "license": "MIT",
   "author": "arifszn",
   "repository": {
@@ -22,7 +31,19 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-preset-minify": "^0.5.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "scripts": {
-      "build": "webpack"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel ./src -d dist --copy-files",
+    "eject": "react-scripts eject"
   }
 }

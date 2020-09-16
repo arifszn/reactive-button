@@ -1,7 +1,8 @@
-import * as React from "react";
-
+import React from 'react';
 
 export interface ReactiveButtonProps {
+  onClick ? (): void;
+  buttonState: string;
   type: string;
   idleLabel: string;
   loadingLabel: string;
@@ -10,13 +11,13 @@ export interface ReactiveButtonProps {
   className: string;
   style: React.CSSProperties;
   rounded: boolean;
-  mode: string;
+  outline: boolean;
+  shadow: boolean;
+  color: string;
   size: string;
-  buttonState: string;
   autoHideMessage: boolean;
   messageDuration: number;
   disabled: boolean;
-  onClick ? (): void;
 }
 
 declare class ReactiveButton extends React.Component<ReactiveButtonProps, any> {}
