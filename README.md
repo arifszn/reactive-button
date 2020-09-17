@@ -72,10 +72,10 @@ export default App;
 | buttonState | string | Current button state | 'idle' |
 | onClick        | function   | Callback function when clicking button            | () => {}     |
 | color     | string   | Button color       | 'primary'     |
-| idleText         | string\|ReactNode     | Button text when idle         | 'Click Me'     |
-| loadingText       | string\|ReactNode     | Button text when loading         | 'Loading'     |
-| successText         | string\|ReactNode     | Button text when loading successful         | 'Success!'     |
-| errorText         | string\|ReactNode     | Button text when loading failed     | 'Error!'     |
+| idleText         | string \| ReactNode     | Button text when idle         | 'Click Me'     |
+| loadingText       | string \| ReactNode     | Button text when loading         | 'Loading'     |
+| successText         | string \| ReactNode     | Button text when loading successful         | 'Success!'     |
+| errorText         | string \| ReactNode     | Button text when loading failed     | 'Error!'     |
 | type | string | Button type attribute | 'button' |
 | className         | string     | Button classnames         | ''     |
 | style         | React.CSSProperties     | Custom style       | {}     |
@@ -86,7 +86,7 @@ export default App;
 | block         | boolean     | Block Button | false     |
 | messageDuration         | number     | Success/Error message duration in millisecond      | 2000     |
 | disabled         | boolean     | Disable button | false     |
-| buttonRef         | React.Ref | null    | Button reference     | null     |
+| buttonRef         | React.Ref \| null    | Button reference     | null     |
 
 ## Browser Compatibility
 
