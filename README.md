@@ -40,23 +40,24 @@ function App() {
 
   return (
         <ReactiveButton
-          buttonState={state} /* idle|loading|success/error Default: idle*/
-          onClick={onClickHandler} /* function|null Default: null*/
-          color={'primary'} /* primary|dark|light|green|red Default: primary*/
-          type={'button'} /* button|submit Default: button*/
-          idleLabel={'Button'} /* Default: Button*/
-          loadingLabel={'<span class="drbll1"><i class="rdbs1"></i>Loading</span>'} /* Default: Loading*/
-          successLabel={'Success!'} /* Default: Success!*/
-          errorLabel={'Error!'} /* Default: Error!*/
-          className={'class1 class2'} /* Default: null*/
-          style={{ textAlign: 'center' }} /* Default: null*/
-          size={'normal'} /* Default: normal*/
-          messageDuration={2000} /* Default: 2000*/
-          disabled={false} /* Default: false*/
-          outline={false} /* Default: false*/
-          shadow={false} /* Default: false*/
-          rounded={false} /* Default: false*/
-          buttonRef={null} /* Default: null*/
+          buttonState={state} /* 'idle' | 'loading' | 'success' | 'error'   Default: 'idle' */
+          onClick={onClickHandler} /* function    Default: () => {} */
+          color={'primary'} /* 'primary' | 'dark' | 'light' | 'green' | 'red'   Default: 'primary' */
+          idleText={'Button'} /* string | ReactNode   Default: 'Click Me'*/
+          loadingText={'<span class="drbll1"><i class="rdbs1"></i>Loading</span>'} /* string | ReactNode    Default: 'Loading' */
+          successText={'Success!'} /* string | ReactNode    Default: 'Success!' */
+          errorText={'Error!'} /* string | ReactNode   Default: 'Error!' */
+          type={'button'} /* 'button' | 'submit' | 'reset'    Default: 'button' */
+          className={'class1 class2'} /* string   Default: '' */
+          style={{ textAlign: 'center' }} /* CSSProperties   Default: {} */
+          outline={false} /* boolean    Default: false */
+          shadow={false} /* boolean   Default: false */
+          rounded={false} /*boolean   Default: false */
+          size={'normal'} /* 'normal' | 'small' | 'large'   Default: normal */
+          block={false} /* boolean   Default: false */
+          messageDuration={2000} /* number    Default: 2000 */
+          disabled={false} /* Boolean    Default: false */
+          buttonRef={null} /* React.Ref | null   Default: null*/
         />
   );
 }
@@ -68,23 +69,24 @@ export default App;
 
 | Property            |  Type   | Description                                     | Default |
 | :-----------        | :---:   | :-------------------------------------          | :----:  |
-| buttonState                 | string     | Current button state    | idle       |
-| onClick        | function   | Button click event            | ()     |
-| color     | string   | Button color       | primary     |
-| type  | string | Button type submit or button   | button   |
-| idleLabel         | string\|object     | Button text when idle         | Button     |
-| loadingLabel         | string\|object     | Button text when loading         | Loading     |
-| successLabel         | string\|object     | Button text when successfully loaded         | Sucess!     |
-| errorLabel         | string\|object     | Button text when error occured       | Error!     |
-| className         | string     | Custom classnames         | null     |
-| style         | React.CSSProperties     | Custom style       | null     |
-| size         | string     | Button size | normal     |
-| messageDuration         | number     | Duration of success/error message      | 2000     |
-| disabled         | boolean     | Disabled button | false     |
-| outline         |  boolean    | Enable outline effect        | false     |
+| buttonState | string | Current button state | 'idle' |
+| onClick        | function   | Callback function when clicking button            | () => {}     |
+| color     | string   | Button color       | 'primary'     |
+| idleText         | string\|ReactNode     | Button text when idle         | 'Click Me'     |
+| loadingText       | string\|ReactNode     | Button text when loading         | 'Loading'     |
+| successText         | string\|ReactNode     | Button text when loading successful         | 'Success!'     |
+| errorText         | string\|ReactNode     | Button text when loading failed     | 'Error!'     |
+| type | string | Button type attribute | 'button' |
+| className         | string     | Button classnames         | ''     |
+| style         | React.CSSProperties     | Custom style       | {}     |
+| outline | boolean | Enable outline effect | false |
 | shadow         | boolean     | Enable shadow effect      | false     |
-| rounded         | boolean     | Rounded button     | false     |
-| buttonRef         | React.Ref     | Button reference     | null     |
+| rounded         | boolean     | Enable rounded button     | false     |
+| size         | string     | Button size | 'normal'     |
+| block         | boolean     | Block Button | false     |
+| messageDuration         | number     | Success/Error message duration in millisecond      | 2000     |
+| disabled         | boolean     | Disable button | false     |
+| buttonRef         | React.Ref | null    | Button reference     | null     |
 
 ## Browser Compatibility
 

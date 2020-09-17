@@ -104,7 +104,7 @@
 	transition: transform .2s ease;
 }
 
-.reactive-btn:not(.idle) .progress {
+.reactive-btn:not([data-button-state="idle"]) .progress {
 	transform: translateX(0%);
 	transition: transform 3s cubic-bezier(0.59, 0.01, 0.41, 0.99);
 }
@@ -133,17 +133,17 @@
 }
 
 /* success state */
-/* .reactive-btn.success {
+/* .reactive-btn[data-button-state="success"] {
 	opacity: .7;
 } */
 
 
 /* error state */
-.reactive-btn.error.outline {
+.reactive-btn[data-button-state="error"].outline {
 	color: white;
 }
 
-.reactive-btn.error .progress {
+.reactive-btn[data-button-state="error"] .progress {
 	/* opacity: .8; */
 	background: #f92672 !important;
 }
