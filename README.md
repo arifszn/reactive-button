@@ -44,7 +44,7 @@ function App() {
           onClick={onClickHandler} /* function    Default: () => {} */
           color={'primary'} /* 'primary' | 'dark' | 'light' | 'green' | 'red'   Default: 'primary' */
           idleText={'Button'} /* string | ReactNode   Default: 'Click Me'*/
-          loadingText={'<span class="drbll1"><i class="rdbs1"></i>Loading</span>'} /* string | ReactNode    Default: 'Loading' */
+          loadingText={<span className="drbll1"><i className="rdbs1"></i>Loading</span>} /* string | ReactNode    Default: 'Loading' */
           successText={'Success!'} /* string | ReactNode    Default: 'Success!' */
           errorText={'Error!'} /* string | ReactNode   Default: 'Error!' */
           type={'button'} /* 'button' | 'submit' | 'reset'    Default: 'button' */
@@ -57,7 +57,7 @@ function App() {
           block={false} /* boolean   Default: false */
           messageDuration={2000} /* number    Default: 2000 */
           disabled={false} /* Boolean    Default: false */
-          buttonRef={null} /* React.Ref | null   Default: null*/
+          buttonRef={null} /* React.Ref | null   Default: null */
         />
   );
 }
