@@ -31,7 +31,7 @@ import ReactiveButton from 'reactive-button';
 function App() {
   const [state, setState] = useState('idle');
 
-  const onclickHandler = () => {
+  const onClickHandler = () => {
     setState('loading');
     setTimeout(() => {
       setState('success');
@@ -41,7 +41,7 @@ function App() {
   return (
         <ReactiveButton
           buttonState={state} /* idle|loading|success/error Default: idle*/
-          onClick={onclickHandler} /* function|null Default: null*/
+          onClick={onClickHandler} /* function|null Default: null*/
           color={'primary'} /* primary|dark|light|green|red Default: primary*/
           type={'button'} /* button|submit Default: button*/
           idleLabel={'Button'} /* Default: Button*/
