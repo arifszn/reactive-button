@@ -102,7 +102,7 @@ export default App;
 
 ## Support
 
-Support us by :star: on <a href="https://github.com/arifszn/reactive-button">Github</a>
+Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arifszn/reactive-button">Github</a>
 
 ## License
 
