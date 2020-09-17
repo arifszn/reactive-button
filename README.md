@@ -49,7 +49,7 @@ function App() {
           successLabel={'Success!'} /* Default: Success!*/
           errorLabel={'Error!'} /* Default: Error!*/
           className={'class1 class 2'} /* Default: null*/
-          style={{ margin: '4px' }} /* Default: null*/
+          style={{ textAlign: 'center' }} /* Default: null*/
           size={'normal'} /* Default: normal*/
           autoHideMessage={true} /* Default: true*/
           messageDuration={2000} /* Default: 2000*/
