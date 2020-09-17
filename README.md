@@ -56,6 +56,7 @@ function App() {
           outline={false} /* Default: false*/
           shadow={false} /* Default: false*/
           rounded={false} /* Default: false*/
+          buttonRef={null} /* Default: null*/
         />
   );
 }
@@ -71,18 +72,19 @@ export default App;
 | onClick        | function   | Button click event            | ()     |
 | color     | string   | Button color       | primary     |
 | type  | string | Button type submit or button   | button   |
-| idleLabel         | string     | Button text when idle         | Button     |
-| loadingLabel         | string     | Button text when loading         | Loading     |
-| successLabel         | string     | Button text when successfully loaded         | Sucess!     |
-| errorLabel         | string     | Button text when error occured       | Error!     |
+| idleLabel         | string\|object     | Button text when idle         | Button     |
+| loadingLabel         | string\|object     | Button text when loading         | Loading     |
+| successLabel         | string\|object     | Button text when successfully loaded         | Sucess!     |
+| errorLabel         | string\|object     | Button text when error occured       | Error!     |
 | className         | string     | Custom classnames         | null     |
-| style         | string     | Custom style       | null     |
+| style         | React.CSSProperties     | Custom style       | null     |
 | size         | string     | Button size | normal     |
 | messageDuration         | number     | Duration of success/error message      | 2000     |
 | disabled         | boolean     | Disabled button | false     |
 | outline         |  boolean    | Enable outline effect        | false     |
 | shadow         | boolean     | Enable shadow effect      | false     |
 | rounded         | boolean     | Rounded button     | false     |
+| buttonRef         | React.Ref     | Button reference     | null     |
 
 ## Browser Compatibility
 

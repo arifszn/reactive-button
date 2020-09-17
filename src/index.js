@@ -15,20 +15,7 @@ const ReactiveButton = (props) => {
     const color        = props.color?props.color:'primary';
     const size         = props.size?props.size:'normal';
     const [buttonState, setButtonState] = useState(props.buttonState?props.buttonState:'idle');
-
-    const setLabel = (state) => {
-        if (state === 'idle') {
-            return idleLabel;
-        } else if (state === 'loading') {
-            return loadingLabel;
-        } else if (state === 'success') {
-            return successLabel;
-        } else if (state === 'error') {
-            return errorLabel;
-        } else {
-            return idleLabel;
-        }
-    }
+    const [buttonLabel, setButtonLabel] = useState(props.idleLabel?props.idleLabel:idleLabel);
 
     const onClickHandler = () => {
         if (typeof props.onClick !== 'undefined') {
@@ -48,9 +35,31 @@ const ReactiveButton = (props) => {
         }
     }, [props.buttonState, props.messageDuration])
 
+    useEffect(() => {
+        if (buttonState === 'idle') {
+            setButtonLabel(idleLabel);
+        } else if (buttonState === 'loading') {
+            setButtonLabel(loadingLabel);
+        } else if (buttonState === 'success') {
+            setButtonLabel(successLabel);
+        } else if (buttonState === 'error') {
+            setButtonLabel(errorLabel);
+        }
+    }, [buttonState])
+
+    const populateLabel = () => {
+        if (typeof buttonLabel === 'object') {
+            return <span className="content" >{buttonLabel}</span>;
+        } else if (typeof buttonLabel === 'string') {
+            return <span className="content" dangerouslySetInnerHTML={{ __html: buttonLabel }}></span>;
+        }
+        
+    }
+
     return (
         <React.Fragment>
             <button
+                ref={typeof props.buttonRef !== 'undefined' ? props.buttonRef : null }
                 disabled={buttonState !== 'idle' || props.disabled}
                 type={type}
                 className={
@@ -60,7 +69,7 @@ const ReactiveButton = (props) => {
                 style={style}
             >
                 <span className="progress"></span>
-                <span className="content" dangerouslySetInnerHTML={{ __html: setLabel(buttonState) }}></span>
+                {populateLabel()}
             </button>
         </React.Fragment>
     )
