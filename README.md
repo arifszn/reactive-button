@@ -10,6 +10,11 @@ Install via <a href="https://www.npmjs.com/package/reactive-button">NPM</a>
 npm install --save reactive-button
 ```
 
+Install via <a href="https://yarnpkg.com/package/reactive-button">yarn</a>
+```
+yarn add reactive-button
+```
+
 ## Doc
 
 Simply manage 3 states to change button behaviour.
