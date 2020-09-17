@@ -48,7 +48,7 @@ function App() {
           loadingLabel={'<span class="drbll1"><i class="rdbs1"></i>Loading</span>'} /* Default: Loading*/
           successLabel={'Success!'} /* Default: Success!*/
           errorLabel={'Error!'} /* Default: Error!*/
-          className={'class1 class 2'} /* Default: null*/
+          className={'class1 class2'} /* Default: null*/
           style={{ margin: '4px' }} /* Default: null*/
           size={'normal'} /* Default: normal*/
           autoHideMessage={true} /* Default: true*/
