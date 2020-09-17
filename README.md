@@ -31,7 +31,7 @@ import ReactiveButton from 'reactive-button';
 function App() {
   const [state, setState] = useState('idle');
 
-  const onclickHandler = () => {
+  const onClickHandler = () => {
     setState('loading');
     setTimeout(() => {
       setState('success');
@@ -41,17 +41,16 @@ function App() {
   return (
         <ReactiveButton
           buttonState={state} /* idle|loading|success/error Default: idle*/
-          onClick={onclickHandler} /* function|null Default: null*/
+          onClick={onClickHandler} /* function|null Default: null*/
           color={'primary'} /* primary|dark|light|green|red Default: primary*/
           type={'button'} /* button|submit Default: button*/
           idleLabel={'Button'} /* Default: Button*/
           loadingLabel={'<span class="drbll1"><i class="rdbs1"></i>Loading</span>'} /* Default: Loading*/
           successLabel={'Success!'} /* Default: Success!*/
           errorLabel={'Error!'} /* Default: Error!*/
-          className={'class1 class 2'} /* Default: null*/
+          className={'class1 class2'} /* Default: null*/
           style={{ textAlign: 'center' }} /* Default: null*/
           size={'normal'} /* Default: normal*/
-          autoHideMessage={true} /* Default: true*/
           messageDuration={2000} /* Default: 2000*/
           disabled={false} /* Default: false*/
           outline={false} /* Default: false*/
@@ -79,7 +78,6 @@ export default App;
 | className         | string     | Custom classnames         | null     |
 | style         | string     | Custom style       | null     |
 | size         | string     | Button size | normal     |
-| autoHideMessage         | boolean     | Auto hides success/error message         | true     |
 | messageDuration         | number     | Duration of success/error message      | 2000     |
 | disabled         | boolean     | Disabled button | false     |
 | outline         |  boolean    | Enable outline effect        | false     |

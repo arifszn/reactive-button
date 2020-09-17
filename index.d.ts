@@ -15,7 +15,6 @@ export interface ReactiveButtonProps {
   shadow: boolean;
   color: string;
   size: string;
-  autoHideMessage: boolean;
   messageDuration: number;
   disabled: boolean;
 }

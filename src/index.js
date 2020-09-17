@@ -15,7 +15,6 @@ const ReactiveButton = (props) => {
     const color        = props.color?props.color:'primary';
     const size         = props.size?props.size:'normal';
     const [buttonState, setButtonState] = useState(props.buttonState?props.buttonState:'idle');
-    const [disabled, setDisabled]       = useState(false);
 
     const setLabel = (state) => {
         if (state === 'idle') {
@@ -33,18 +32,7 @@ const ReactiveButton = (props) => {
 
     const onClickHandler = () => {
         if (typeof props.onClick !== 'undefined') {
-            if (!disabled) {
-                if (buttonState !== 'idle') {
-                    setButtonState('idle');
-                    setTimeout(() => {
-                        setDisabled(true);
-                        props.onClick();
-                    }, 1000);
-                } else {
-                    setDisabled(true);
-                    props.onClick();
-                }
-            }
+            props.onClick();
         }
     }
 
@@ -54,19 +42,16 @@ const ReactiveButton = (props) => {
 
             if ((props.buttonState === 'success' || props.buttonState === 'error')) {
                 setTimeout(() => {
-                    setDisabled(false);
-                    if (typeof props.autoHideMessage === 'undefined' || props.autoHideMessage) {
-                        setButtonState('idle');
-                    }
+                    setButtonState('idle');
                 }, (props.messageDuration ? props.messageDuration : 1000));
             }
         }
-    }, [props.buttonState, props.messageDuration, props.autoHideMessage])
+    }, [props.buttonState, props.messageDuration])
 
     return (
         <React.Fragment>
             <button
-                disabled={disabled === true || props.disabled}
+                disabled={buttonState !== 'idle' || props.disabled}
                 type={type}
                 className={
                     `${className} ${buttonState} ${color} ${size}${outline?' outline':''}${rounded?' rounded':''}${shadow?' shadow': ''}${props.disabled?' disabled':''}`
