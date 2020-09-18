@@ -53,7 +53,7 @@ function App() {
           outline={false} /* boolean    Default: false */
           shadow={false} /* boolean   Default: false */
           rounded={false} /*boolean   Default: false */
-          size={'normal'} /* 'normal' | 'small' | 'large'   Default: normal */
+          size={'normal'} /* 'normal' | 'small' | 'large'   Default: 'normal' */
           block={false} /* boolean   Default: false */
           messageDuration={2000} /* number    Default: 2000 */
           disabled={false} /* Boolean    Default: false */
@@ -96,13 +96,14 @@ export default App;
 | Firefox |   ✔   |
 | Safari  |   ✔   |
 
+
 ## Demo
 
 > Work in progress
 
 ## Support
 
-Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arifszn/reactive-button">Github</a>
+Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arifszn/reactive-button">Github</a>.
 
 ## License
 

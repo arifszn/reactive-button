@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react';
 import './css/index.css';
 
 const ReactiveButton = (props) => {
-    const color        = props.color ? props.color : 'primary';
+    const color       = props.color ? props.color : 'primary';
     const idleText    = props.idleText ? props.idleText : 'Click Me';
-    const loadingText = props.loadingText ? props.loadingText : <span className="drbll1"><i className="rdbs1"></i>Loading</span>;
+    const loadingText = props.loadingText ? props.loadingText : <span className = "drbll1"><i className = "rdbs1"></i>Loading</span>;
     const successText = props.successText ? props.successText : 'Success!';
     const errorText   = props.errorText ? props.errorText : 'Error!';
-    const type         = props.type ? props.type : 'button';
-    const className    = `reactive-btn${props.className ? ' ' + props.className : ''}${props.block ? ' block' : ''}`;
-    const outline      = props.outline ? true : false;
-    const shadow       = props.shadow ? true : false;
-    const style        = props.style ? props.style : {};
-    const rounded      = props.rounded ? true : false;
-    const size         = props.size ? props.size : 'normal';
+    const type        = props.type ? props.type : 'button';
+    const className   = `reactive-btn${props.className ? ' ' + props.className : ''}${props.block ? ' block' : ''}`;
+    const outline     = props.outline ? true : false;
+    const shadow      = props.shadow ? true : false;
+    const style       = props.style ? props.style : {};
+    const rounded     = props.rounded ? true : false;
+    const size        = props.size ? props.size : 'normal';
     const [buttonState, setButtonState] = useState(props.buttonState ? props.buttonState : 'idle');
 
     const onClickHandler = () => {
@@ -25,7 +25,6 @@ const ReactiveButton = (props) => {
     useEffect(() => {
         if (typeof props.buttonState !== 'undefined') {
             setButtonState(props.buttonState);
-
             if ((props.buttonState === 'success' || props.buttonState === 'error')) {
                 setTimeout(() => {
                     setButtonState('idle');
