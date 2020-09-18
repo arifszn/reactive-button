@@ -117,6 +117,18 @@ export interface ReactiveButtonProps {
    * Default null
    */
   buttonRef: React.Ref | null;
+
+  /**
+   * Override button width.
+   * Default null
+   */
+  width: string | null;
+
+  /**
+   * Override button height.
+   * Default null
+   */
+  height: string | null;
 }
 
 declare class ReactiveButton extends React.Component<ReactiveButtonProps, any> {}

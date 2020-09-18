@@ -44,7 +44,7 @@ function App() {
           onClick={onClickHandler} /* function    Default: () => {} */
           color={'primary'} /* 'primary' | 'dark' | 'light' | 'green' | 'red'   Default: 'primary' */
           idleText={'Button'} /* string | ReactNode   Default: 'Click Me'*/
-          loadingText={<span className="drbll1"><i className="rdbs1"></i>Loading</span>} /* string | ReactNode    Default: 'Loading' */
+          loadingText={<span><i className="reactive-btn-spinner"></i>Loading</span>} /* string | ReactNode    Default: 'Loading' */
           successText={'Success!'} /* string | ReactNode    Default: 'Success!' */
           errorText={'Error!'} /* string | ReactNode   Default: 'Error!' */
           type={'button'} /* 'button' | 'submit' | 'reset'    Default: 'button' */
@@ -58,6 +58,8 @@ function App() {
           messageDuration={2000} /* number    Default: 2000 */
           disabled={false} /* Boolean    Default: false */
           buttonRef={null} /* React.Ref | null   Default: null */
+          width={'100px'} /* string | null   Default: null */
+          height={'35px'} /* string | null   Default: null */
         />
   );
 }
@@ -87,6 +89,8 @@ export default App;
 | messageDuration         | number     | Success/Error message duration in millisecond      | 2000     |
 | disabled         | boolean     | Disable button | false     |
 | buttonRef         | React.Ref \| null    | Button reference     | null     |
+| width         | string \| null    | Override button width     | null     |
+| height         | string \| null    | Override button height     | null     |
 
 ## Browser Compatibility
 

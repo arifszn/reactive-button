@@ -4,11 +4,11 @@ import './css/index.css';
 const ReactiveButton = (props) => {
     const color       = props.color ? props.color : 'primary';
     const idleText    = props.idleText ? props.idleText : 'Click Me';
-    const loadingText = props.loadingText ? props.loadingText : <span className = "drbll1"><i className = "rdbs1"></i>Loading</span>;
+    const loadingText = props.loadingText ? props.loadingText : <span><i className="reactive-btn-spinner"></i>Loading</span>;
     const successText = props.successText ? props.successText : 'Success!';
     const errorText   = props.errorText ? props.errorText : 'Error!';
     const type        = props.type ? props.type : 'button';
-    const className   = `reactive-btn${props.className ? ' ' + props.className : ''}${props.block ? ' block' : ''}`;
+    const className   = `reactive-btn${props.className ? ' ' + props.className : ''}`;
     const outline     = props.outline ? true : false;
     const shadow      = props.shadow ? true : false;
     const style       = props.style ? props.style : {};
@@ -47,20 +47,22 @@ const ReactiveButton = (props) => {
 
     return (
         <React.Fragment>
-            <button
-                ref={typeof props.buttonRef !== 'undefined' ? props.buttonRef : null }
-                disabled={buttonState !== 'idle' || props.disabled}
-                data-button-state={buttonState}
-                type={type}
-                className={
-                    `${className} ${color} ${size}${outline ? ' outline' : ''}${rounded ? ' rounded' : ''}${shadow ? ' shadow' : ''}${props.disabled ? ' disabled' : ''}`
-                }
-                onClick={onClickHandler}
-                style={style}
-            >
-                <span className="progress"></span>
-                <span className="content" >{getButtonText(buttonState)}</span>
-            </button>
+            <span className={`reactive-btn-wrapper ${size}${props.block ? ' block' : ''}`} style={{width: props.width, height: props.height}}>
+                <button
+                    ref={typeof props.buttonRef !== 'undefined' ? props.buttonRef : null }
+                    disabled={buttonState !== 'idle' || props.disabled}
+                    data-button-state={buttonState}
+                    type={type}
+                    className={
+                        `${className} ${color} ${outline ? ' outline' : ''}${rounded ? ' rounded' : ''}${shadow ? ' shadow' : ''}${props.disabled ? ' disabled' : ''}`
+                    }
+                    onClick={onClickHandler}
+                    style={style}
+                >
+                    <span className="progress"></span>
+                    <span className="content" >{getButtonText(buttonState)}</span>
+                </button>
+            </span>
         </React.Fragment>
     )
 }

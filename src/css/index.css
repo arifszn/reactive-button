@@ -1,6 +1,6 @@
-.reactive-btn {
-	--reactive-button-min-width: 115px;
-	--reactive-button-height: 20px;
+.reactive-btn-wrapper, .reactive-btn {
+	--reactive-button-min-width: 100px;
+	--reactive-button-height: 35px;
 	--reactive-button-font-size: 14px;
 	--reactive-button-font-weight: 400;
 	--reactive-button-text-color: #FFFFFF;
@@ -20,14 +20,34 @@
 	
 }
 
-.reactive-btn {
+.reactive-btn-wrapper {
+	display: inline-block;
 	min-width: var(--reactive-button-min-width);
+	height: var(--reactive-button-height);
+}
+
+.reactive-btn-wrapper.small {
+	height: calc(var(--reactive-button-height) - 5px);
+	min-width: calc(var(--reactive-button-min-width) - 25px);
+}
+
+.reactive-btn-wrapper.large {
+	height: calc(var(--reactive-button-height) + 5px);
+	min-width: calc(var(--reactive-button-min-width) + 25px);
+}
+
+.reactive-btn-wrapper.block {
+	min-width: 100%;
+}
+
+.reactive-btn {
 	display: inline-block;
 	margin-bottom: 0;
 	padding: 6px 14px 6px;
 	font-size: var(--reactive-button-font-size);
 	font-weight: var(--reactive-button-font-weight);
-	line-height: var(--reactive-button-height);
+	height: 100%;
+	width: 100%;
 	color: var(--reactive-button-text-color);
 	text-align: center;
 	text-decoration: none;
@@ -110,9 +130,9 @@
 }
 
 /* button spinner */
-.reactive-btn .rdbs1 {
-	width: calc(var(--reactive-button-height) - 5px);
-	height: calc(var(--reactive-button-height) - 5px);
+.reactive-btn .reactive-btn-spinner {
+	width: calc(var(--reactive-button-height) - 22px);
+	height: calc(var(--reactive-button-height) - 22px);
 	margin-right: 3px;
 	border-top-color: inherit;
 	border-left-color: inherit;
@@ -148,30 +168,24 @@
 	background: #f92672 !important;
 }
 
-.reactive-btn.small .rdbs1 {
-	width: calc(var(--reactive-button-height) - 7px);
-	height: calc(var(--reactive-button-height) - 7px);
+.reactive-btn-wrapper.small .reactive-btn .reactive-btn-spinner {
+	width: calc(var(--reactive-button-height) - 24px);
+	height: calc(var(--reactive-button-height) - 24px);
 }
 
-.reactive-btn.small {
+.reactive-btn-wrapper.small .reactive-btn {
 	font-size: calc(var(--reactive-button-font-size) - 2px);
 	min-width: calc(var(--reactive-button-min-width) - 25px);
-	line-height: calc(var(--reactive-button-height) - 5px);
 }
 
-.reactive-btn.large {
+.reactive-btn-wrapper.large .reactive-btn {
 	font-size: calc(var(--reactive-button-font-size) + 2px);
 	min-width: calc(var(--reactive-button-min-width) + 25px);
-	line-height: calc(var(--reactive-button-height) + 5px);
 }
 
-.reactive-btn.large .rdbs1 {
-	width: calc(var(--reactive-button-height) - 1px);
-	height: calc(var(--reactive-button-height) - 1px);
-}
-
-.reactive-btn.block {
-	min-width: 100%;
+.reactive-btn-wrapper.large .reactive-btn .reactive-btn-spinner {
+	width: calc(var(--reactive-button-height) - 20px);
+	height: calc(var(--reactive-button-height) - 20px);
 }
 
 
