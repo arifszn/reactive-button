@@ -129,6 +129,12 @@ export interface ReactiveButtonProps {
    * Default null
    */
   height: string | null;
+
+  /**
+   * Button hover and click animation.
+   * Default true
+   */
+  animation: boolean;
 }
 
 declare class ReactiveButton extends React.Component<ReactiveButtonProps, any> {}

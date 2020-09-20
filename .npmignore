@@ -3,3 +3,4 @@ demo
 .babelrc
 .eslintrc.js
 webpack.config.js
+stats.html

@@ -123,6 +123,7 @@ function App() {
       buttonRef={null}
       width={null}
       height={null}
+      animation={true}
     />
   );
 }
@@ -154,6 +155,7 @@ export default App;
 | buttonRef         | React.Ref \| null    | Button reference     | null     |
 | width         | string \| null    | Override button width     | null     |
 | height         | string \| null    | Override button height     | null     |
+| animation         | boolean   | Button hover and click animation     | true     |
 
 ## Support
 

@@ -14,6 +14,7 @@ const ReactiveButton = (props) => {
     const style       = props.style ? props.style : {};
     const rounded     = props.rounded ? true : false;
     const size        = props.size ? props.size : 'normal';
+    const animation   = (typeof props.animation !== 'undefined' && props.animation === false) ? false : true;
     const [buttonState, setButtonState] = useState(props.buttonState ? props.buttonState : 'idle');
 
     const onClickHandler = () => {
@@ -54,7 +55,7 @@ const ReactiveButton = (props) => {
                     data-button-state={buttonState}
                     type={type}
                     className={
-                        `${className} ${color} ${outline ? ' outline' : ''}${rounded ? ' rounded' : ''}${shadow ? ' shadow' : ''}${props.disabled ? ' disabled' : ''}`
+                        `${className} ${color}${outline ? ' outline' : ''}${!animation ? ' no-animation' : ''}${rounded ? ' rounded' : ''}${shadow ? ' shadow' : ''}${props.disabled ? ' disabled' : ''}`
                     }
                     onClick={onClickHandler}
                     style={style}
