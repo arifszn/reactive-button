@@ -6,6 +6,7 @@
 <p align="center">
     <img src="https://img.shields.io/npm/v/reactive-button">
     <img src="https://img.shields.io/bundlephobia/min/reactive-button">
+    <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg">
     <a href="https://github.com/arifszn/reactive-button/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/reactive-button"></a>
     <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-informational" alt="Author arifszn"></a>
 </p>
@@ -30,7 +31,6 @@
 * [Installation](#installation)
 * [Usage](#usage)
 * [Available Props](#available-props)
-* [Browser Compatibility](#browser-compatibility)
 * [Support](#support)
 * [License](#license)
 
@@ -154,14 +154,6 @@ export default App;
 | buttonRef         | React.Ref \| null    | Button reference     | null     |
 | width         | string \| null    | Override button width     | null     |
 | height         | string \| null    | Override button height     | null     |
-
-## Browser Compatibility
-
-| Browser | Works? |
-| :------ | :----: |
-| Chrome  |   ✔   |
-| Firefox |   ✔   |
-| Safari  |   ✔   |
 
 ## Support
 
