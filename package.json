@@ -36,12 +36,17 @@
   "keywords": [
     "react",
     "button",
-    "react-button"
+    "react-button",
+    "react-component",
+    "button-component",
+    "button-progress",
+    "button-ui",
+    "beautiful-button"
   ],
   "author": "arifszn",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/arifszn/reactive-button/issues"
   },
-  "homepage": "https://github.com/arifszn/reactive-button#readme"
+  "homepage": "https://arifszn.github.io/reactive-button/"
 }
