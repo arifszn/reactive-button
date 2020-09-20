@@ -1,7 +1,44 @@
-# Reactive Button
+<p align="center">
+  <a href="https://arifszn.github.io/reactive-button/" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/logo/logo.svg" alt="Reactive Button" title="Reactive Button" width="80"></a>
+</p>
+<p><h1 align="center">Reactive Button</h1></p>
+<p align="center">A React Button component that thinks like React.</p>
+<p align="center">
+    <img src="https://img.shields.io/npm/v/reactive-button">
+    <img src="https://img.shields.io/bundlephobia/min/reactive-button">
+    <a href="https://github.com/arifszn/reactive-button/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/reactive-button"></a>
+    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-informational" alt="Author arifszn"></a>
+</p>
+<p align="center">https://arifszn.github.io/reactive-button/</p>
 
-A React Button component that thinks like react.
+<p align="center">
+  <a href="https://arifszn.github.io/reactive-button/" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/demo.gif" alt="Reactive Button Preview" title="Reactive Button Preview"></a>
+</p>
 
+* Reactive
+* Animated
+* Lightweight <small><code><20KB</code></small>
+* Supports icons
+* Zero dependency 
+* Super easy to setup
+* Super easy to customize
+* And much more !
+
+## Table of Contents
+
+* [Resources](#resources)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Available Props](#available-props)
+* [Browser Compatibility](#browser-compatibility)
+* [Support](#support)
+* [License](#license)
+
+## Resources
+
+- [Demo](https://arifszn.github.io/reactive-button/)
+- [Documentation](https://arifszn.github.io/reactive-button/docs/)
+- [Playground](https://arifszn.github.io/reactive-button/docs/playground)
 
 # Installation
 
@@ -10,19 +47,18 @@ Install via <a href="https://www.npmjs.com/package/reactive-button">NPM</a>
 npm install --save reactive-button
 ```
 
-Install via <a href="https://yarnpkg.com/package/reactive-button">yarn</a>
+Install via <a href="https://yarnpkg.com/package/reactive-button">Yarn</a>
 ```
 yarn add reactive-button
 ```
 
-## Doc
+## Usage
 
-Simply manage 3 states to change button behaviour.
-1. idle: When the button does nothing
-2. loading: When data is loading
-3. success/error: When data is loaded
+- Initialize a state with string value <code>'idle'</code>
+- When the button is clicked, set state to <code>'loading'</code>
+- When the task is completed, set state to <code>'success'</code> or <code>'error'</code> according to your need
 
-Basic Usage: 
+Basic Usage:
 
 ```js
 import React, { useState } from 'react';
@@ -40,26 +76,8 @@ function App() {
 
   return (
         <ReactiveButton
-          buttonState={state} /* 'idle' | 'loading' | 'success' | 'error'   Default: 'idle' */
-          onClick={onClickHandler} /* function    Default: () => {} */
-          color={'primary'} /* 'primary' | 'dark' | 'light' | 'green' | 'red'   Default: 'primary' */
-          idleText={'Button'} /* string | ReactNode   Default: 'Click Me'*/
-          loadingText={<span><i className="reactive-btn-spinner"></i>Loading</span>} /* string | ReactNode    Default: 'Loading' */
-          successText={'Success!'} /* string | ReactNode    Default: 'Success!' */
-          errorText={'Error!'} /* string | ReactNode   Default: 'Error!' */
-          type={'button'} /* 'button' | 'submit' | 'reset'    Default: 'button' */
-          className={'class1 class2'} /* string   Default: '' */
-          style={{ textAlign: 'center' }} /* CSSProperties   Default: {} */
-          outline={false} /* boolean    Default: false */
-          shadow={false} /* boolean   Default: false */
-          rounded={false} /*boolean   Default: false */
-          size={'normal'} /* 'normal' | 'small' | 'large'   Default: 'normal' */
-          block={false} /* boolean   Default: false */
-          messageDuration={2000} /* number    Default: 2000 */
-          disabled={false} /* Boolean    Default: false */
-          buttonRef={null} /* React.Ref | null   Default: null */
-          width={'100px'} /* string | null   Default: null */
-          height={'35px'} /* string | null   Default: null */
+          buttonState={state}
+          onClick={onClickHandler}
         />
   );
 }
@@ -67,9 +85,54 @@ function App() {
 export default App;
 ```
 
-## Options
+Full Usage:
 
-| Property            |  Type   | Description                                     | Default |
+```js
+import React, { useState } from 'react';
+import ReactiveButton from 'reactive-button';
+
+function App() {
+  const [state, setState] = useState('idle');
+
+  const onClickHandler = () => {
+    setState('loading');
+    setTimeout(() => {
+      setState('success');
+    }, 2000);
+  }
+
+  return (
+    <ReactiveButton
+      buttonState={state}
+      onClick={onClickHandler}
+      color={'primary'}
+      idleText={'Button'}
+      loadingText={<span><i className="reactive-btn-spinner"></i>Loading</span>}
+      successText={'Success!'}
+      errorText={'Error!'}
+      type={'button'}
+      className={'class1 class2'}
+      style={{ textAlign: 'center' }}
+      outline={false}
+      shadow={false}
+      rounded={false}
+      size={'normal'}
+      block={false}
+      messageDuration={2000}
+      disabled={false}
+      buttonRef={null}
+      width={null}
+      height={null}
+    />
+  );
+}
+
+export default App;
+```
+
+## Available Props 
+
+| Props            |  Type   | Description                                     | Default |
 | :-----------        | :---:   | :-------------------------------------          | :----:  |
 | buttonState | string | Current button state | 'idle' |
 | onClick        | function   | Callback function when clicking button            | () => {}     |
@@ -99,11 +162,6 @@ export default App;
 | Chrome  |   ✔   |
 | Firefox |   ✔   |
 | Safari  |   ✔   |
-
-
-## Demo
-
-> Work in progress
 
 ## Support
 

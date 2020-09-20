@@ -8,16 +8,15 @@
 
 	--reactive-button-primary-color: rgba(88, 103, 221, 1);
 	--reactive-button-dark-color: rgba(66, 78, 106, 1);
-	--reactive-button-light-color: rgba(245, 245, 245, 1);
+	--reactive-button-light-color: rgba(183, 186, 191, 1);
 	--reactive-button-green-color: rgba(52, 191, 163, 1);
 	--reactive-button-red-color: rgba(244, 81, 108, 1);
 
 	--reactive-progress-outline-primary-color: rgba(88, 103, 221, .3);
 	--reactive-progress-outline-dark-color: rgba(66, 78, 106, .3);
-	--reactive-progress-outline-light-color: rgba(245, 245, 245, .3);
+	--reactive-progress-outline-light-color: rgba(214, 212, 212, .3);
 	--reactive-progress-outline-green-color: rgba(52, 191, 163, .3);
 	--reactive-progress-outline-red-color: rgba(244, 81, 108, .3);
-	
 }
 
 .reactive-btn-wrapper {
@@ -37,7 +36,7 @@
 }
 
 .reactive-btn-wrapper.block {
-	min-width: 100%;
+	width: 100%;
 }
 
 .reactive-btn {
@@ -69,7 +68,7 @@
 	box-sizing: border-box;
 	position: relative;
 	overflow: hidden;
-	outline: none;
+	outline: none !important;
 }
 
 .reactive-btn.outline {
@@ -98,11 +97,13 @@
 }
 
 .reactive-btn:focus {
-	outline: none;
+	outline: none !important;
 }
 
 .reactive-btn.rounded {
-	border-radius: 16px;
+	border-radius: 50rem;
+	-webkit-border-radius: 50rem;
+	-moz-border-radius: 50rem;
 }
 
 .reactive-btn.disabled {
@@ -159,14 +160,14 @@
 
 
 /* error state */
-.reactive-btn[data-button-state="error"].outline {
+/* .reactive-btn[data-button-state="error"].outline {
 	color: white;
 }
 
 .reactive-btn[data-button-state="error"] .progress {
-	/* opacity: .8; */
+	opacity: .8;
 	background: #f92672 !important;
-}
+} */
 
 .reactive-btn-wrapper.small .reactive-btn .reactive-btn-spinner {
 	width: calc(var(--reactive-button-height) - 24px);
