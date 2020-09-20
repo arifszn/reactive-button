@@ -16,6 +16,8 @@
   <a href="https://arifszn.github.io/reactive-button/" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/demo.gif" alt="Reactive Button Preview" title="Reactive Button Preview"></a>
 </p>
 
+Reactive Button is a beautiful react component to replace the traditional boring buttons. Comes with customization on top. The goal is to let the users visualize what is happening after a button click.
+
 * Reactive
 * Animated
 * Lightweight <small><code><20KB</code></small>
@@ -54,9 +56,11 @@ yarn add reactive-button
 
 ## Usage
 
-- Initialize a state with string value <code>'idle'</code>
-- When the button is clicked, set state to <code>'loading'</code>
-- When the task is completed, set state to <code>'success'</code> or <code>'error'</code> according to your need
+> Below example demonstrates an asynchronous task. When clicking the button, an asynchronous task (e.g. Data fetch, form submit) will be processed and after processing, a success or error message will be displayed.
+
+- Initialize a state with string value <code>'idle'</code> and assign it as <strong>'buttonState'</strong> prop. Now it will render an idle text.
+- When the button is clicked, set state's value to <code>'loading'</code>. 
+- When the task is completed, set state to <code>'success'</code> or <code>'error'</code> according to your need.
 
 Basic Usage:
 
@@ -130,6 +134,7 @@ function App() {
 
 export default App;
 ```
+> For non asynchronous task, state management is not needed. Use as like normal button.
 
 ## Available Props 
 
