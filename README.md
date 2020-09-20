@@ -4,11 +4,11 @@
 <p><h1 align="center">Reactive Button</h1></p>
 <p align="center">A React Button component that thinks like React.</p>
 <p align="center">
-    <img src="https://img.shields.io/npm/v/reactive-button">
-    <img src="https://img.shields.io/bundlephobia/min/reactive-button">
-    <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg">
-    <a href="https://github.com/arifszn/reactive-button/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/reactive-button"></a>
-    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-informational" alt="Author arifszn"></a>
+    <a href="https://www.npmjs.com/package/reactive-button"><img src="https://img.shields.io/npm/v/reactive-button"/></a>
+    <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
+    <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg"/>
+    <a href="https://github.com/arifszn/reactive-button/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/reactive-button"/></a>
+    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-informational" alt="Author arifszn"/></a>
 </p>
 <p align="center">https://arifszn.github.io/reactive-button/</p>
 
