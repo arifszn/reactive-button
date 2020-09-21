@@ -1,6 +1,6 @@
 .reactive-btn-wrapper, .reactive-btn {
 	--reactive-button-min-width: 100px;
-	--reactive-button-height: 35px;
+	--reactive-button-min-height: 35px;
 	--reactive-button-font-size: 14px;
 	--reactive-button-font-weight: 400;
 	--reactive-button-border-radius: 0px;
@@ -23,17 +23,17 @@
 .reactive-btn-wrapper {
 	display: inline-block;
 	min-width: var(--reactive-button-min-width);
-	height: var(--reactive-button-height);
+	min-height: var(--reactive-button-height);
 }
 
 .reactive-btn-wrapper.small {
-	height: calc(var(--reactive-button-height) - 5px);
 	min-width: calc(var(--reactive-button-min-width) - 25px);
+	min-height: calc(var(--reactive-button-height) - 5px);
 }
 
 .reactive-btn-wrapper.large {
-	height: calc(var(--reactive-button-height) + 5px);
 	min-width: calc(var(--reactive-button-min-width) + 25px);
+	min-height: calc(var(--reactive-button-height) + 5px);
 }
 
 .reactive-btn-wrapper.block {
