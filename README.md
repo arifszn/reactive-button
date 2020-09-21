@@ -10,7 +10,7 @@
     <a href="https://github.com/arifszn/reactive-button/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/reactive-button"/></a>
     <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-informational" alt="Author arifszn"/></a>
 </p>
-<p align="center">https://arifszn.github.io/reactive-button/</p>
+<p align="center">https://arifszn.github.io/reactive-button</p>
 
 <p align="center">
   <a href="https://arifszn.github.io/reactive-button/" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/demo.gif" alt="Reactive Button Preview" title="Reactive Button Preview"></a>
