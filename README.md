@@ -13,7 +13,7 @@
 <p align="center">https://arifszn.github.io/reactive-button</p>
 
 <p align="center">
-  <a href="https://arifszn.github.io/reactive-button/" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/demo.gif" alt="Reactive Button Preview" title="Reactive Button Preview"></a>
+  <a href="https://arifszn.github.io/reactive-button/" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/preview.gif" alt="Reactive Button Preview" title="Reactive Button Preview"></a>
 </p>
 
 Reactive Button is a beautiful react component to replace the traditional boring buttons. Comes with customization on top. The goal is to let the users visualize what is happening after a button click.
