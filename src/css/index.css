@@ -3,6 +3,7 @@
 	--reactive-button-height: 35px;
 	--reactive-button-font-size: 14px;
 	--reactive-button-font-weight: 400;
+	--reactive-button-border-radius: 0px;
 	--reactive-button-text-color: #FFFFFF;
 	--reactive-progress-color: rgba(0, 0, 0, .15);
 
@@ -54,9 +55,9 @@
 	cursor: pointer;
 	background-color: var(--reactive-button-primary-color);
 	border: none;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
+	-webkit-border-radius: var(--reactive-button-border-radius);
+	-moz-border-radius: var(--reactive-button-border-radius);
+	border-radius: var(--reactive-button-border-radius);
 	-webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .2);
 	-moz-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .2);
 	box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .2);
@@ -105,9 +106,9 @@
 }
 
 .reactive-btn.rounded {
-	border-radius: 50rem;
-	-webkit-border-radius: 50rem;
-	-moz-border-radius: 50rem;
+	border-radius: 50rem !important;
+	-webkit-border-radius: 50rem !important;
+	-moz-border-radius: 50rem !important;
 }
 
 .reactive-btn.disabled {
