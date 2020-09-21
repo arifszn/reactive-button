@@ -111,12 +111,12 @@ function App() {
       onClick={onClickHandler}
       color={'primary'}
       idleText={'Button'}
-      loadingText={<span><i className="reactive-btn-spinner"></i>Loading</span>}
-      successText={'Success!'}
-      errorText={'Error!'}
+      loadingText={'Loading'}
+      successText={'Success'}
+      errorText={'Error'}
       type={'button'}
       className={'class1 class2'}
-      style={{ textAlign: 'center' }}
+      style={{ borderRadius: '5px' }}
       outline={false}
       shadow={false}
       rounded={false}
@@ -145,8 +145,8 @@ export default App;
 | color     | string   | Button color       | 'primary'     |
 | idleText         | string \| ReactNode     | Button text when idle         | 'Click Me'     |
 | loadingText       | string \| ReactNode     | Button text when loading         | 'Loading'     |
-| successText         | string \| ReactNode     | Button text when loading successful         | 'Success!'     |
-| errorText         | string \| ReactNode     | Button text when loading failed     | 'Error!'     |
+| successText         | string \| ReactNode     | Button text when loading successful         | 'Success'     |
+| errorText         | string \| ReactNode     | Button text when loading failed     | 'Error'     |
 | type | string | Button type attribute | 'button' |
 | className         | string     | Button classnames         | ''     |
 | style         | React.CSSProperties     | Custom style       | {}     |

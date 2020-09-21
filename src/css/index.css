@@ -1,6 +1,5 @@
 .reactive-btn-wrapper, .reactive-btn {
 	--reactive-button-min-width: 100px;
-	--reactive-button-height: 35px;
 	--reactive-button-font-size: 14px;
 	--reactive-button-font-weight: 400;
 	--reactive-button-border-radius: 0px;
@@ -23,17 +22,15 @@
 .reactive-btn-wrapper {
 	display: inline-block;
 	min-width: var(--reactive-button-min-width);
-	height: var(--reactive-button-height);
+	min-height: inherit;
 }
 
 .reactive-btn-wrapper.small {
 	min-width: calc(var(--reactive-button-min-width) - 25px);
-	height: calc(var(--reactive-button-height) - 5px);
 }
 
 .reactive-btn-wrapper.large {
 	min-width: calc(var(--reactive-button-min-width) + 25px);
-	height: calc(var(--reactive-button-height) + 5px);
 }
 
 .reactive-btn-wrapper.block {
@@ -51,6 +48,10 @@
 	color: var(--reactive-button-text-color);
 	text-align: center;
 	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 	vertical-align: middle;
 	cursor: pointer;
 	background-color: var(--reactive-button-primary-color);
@@ -72,6 +73,34 @@
 	outline: none !important;
 }
 
+.reactive-btn-wrapper.small .reactive-btn {
+	font-size: calc(var(--reactive-button-font-size) - 2px);
+	padding: 5px 12px 5px;
+}
+
+.reactive-btn-wrapper.large .reactive-btn {
+	font-size: calc(var(--reactive-button-font-size) + 2px);
+	padding: 10px 14px 10px;
+}
+
+.reactive-btn:active:not(.no-animation):not(:disabled):not(.disabled) {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	margin-top: 1px;
+	padding: 6px 14px 5px;
+}
+
+.reactive-btn-wrapper.small .reactive-btn:active:not(.no-animation):not(:disabled):not(.disabled) {
+	margin-top: 1px;
+	padding: 5px 12px 4px;
+}
+
+.reactive-btn-wrapper.large .reactive-btn:active:not(.no-animation):not(:disabled):not(.disabled) {
+	margin-top: 1px;
+	padding: 10px 14px 9px;
+}
+
 .reactive-btn.outline {
 	background-color: transparent !important;
 }
@@ -84,21 +113,11 @@
 	opacity: .85;
 }
 
-.reactive-btn:not(.no-animation):hover:not(:disabled):not(.disabled) {
+.reactive-btn:hover:not(:disabled):not(.disabled) {
 	opacity: .85;
 	-webkit-box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .2);
 	-moz-box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .2);
 	box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .2);
-	margin-top: -1px;
-	padding: 6px 14px 8px;
-}
-
-.reactive-btn:not(.no-animation):active:not(:disabled):not(.disabled) {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	margin-top: 1px;
-	padding: 6px 14px 4px;
 }
 
 .reactive-btn:focus {
@@ -135,24 +154,6 @@
 	transition: transform 3s cubic-bezier(0.59, 0.01, 0.41, 0.99);
 }
 
-/* button spinner */
-.reactive-btn .reactive-btn-spinner {
-	width: calc(var(--reactive-button-height) - 22px);
-	height: calc(var(--reactive-button-height) - 22px);
-	margin-right: 3px;
-	border-top-color: inherit;
-	border-left-color: inherit;
-	animation: reactive-spinner 400ms linear infinite;
-	border-bottom-color: transparent;
-	border-right-color: transparent;
-	border-style: solid;
-	border-width: 2px;
-	border-radius: 50%;
-	box-sizing: border-box;
-	display: inline-block;
-	vertical-align: middle;
-}
-
 .reactive-btn .drbll1:after {
 	content: '.';
 	animation: dots 1s steps(5, end) infinite;
@@ -173,27 +174,6 @@
 	opacity: .8;
 	background: #f92672 !important;
 } */
-
-.reactive-btn-wrapper.small .reactive-btn .reactive-btn-spinner {
-	width: calc(var(--reactive-button-height) - 24px);
-	height: calc(var(--reactive-button-height) - 24px);
-}
-
-.reactive-btn-wrapper.small .reactive-btn {
-	font-size: calc(var(--reactive-button-font-size) - 2px);
-	min-width: calc(var(--reactive-button-min-width) - 25px);
-}
-
-.reactive-btn-wrapper.large .reactive-btn {
-	font-size: calc(var(--reactive-button-font-size) + 2px);
-	min-width: calc(var(--reactive-button-min-width) + 25px);
-}
-
-.reactive-btn-wrapper.large .reactive-btn .reactive-btn-spinner {
-	width: calc(var(--reactive-button-height) - 20px);
-	height: calc(var(--reactive-button-height) - 20px);
-}
-
 
 
 /* primary button starts */
@@ -357,14 +337,28 @@
 
 
 
-@keyframes reactive-spinner {
+
+
+@keyframes reactive-spin {
 	0% {
+    -webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
 	}
-
 	100% {
+		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
+}
+
+.reactive-spin {
+	animation: reactive-spin 2s infinite linear;
+}
+.reactive-btn-loading-svg, .reactive-btn-success-svg, .reactive-btn-error-svg {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
 }
 
 @keyframes dots {

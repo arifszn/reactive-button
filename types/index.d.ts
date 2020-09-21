@@ -42,13 +42,13 @@ export interface ReactiveButtonProps {
 
   /**
    * Button text when loading successful.
-   * Default: 'Success!'
+   * Default: 'Success'
    */
   successText?: string | ReactNode;
 
   /**
    * Button text when loading failed.
-   * Default: 'Error!'
+   * Default: 'Error'
    */
   errorText?: string | ReactNode;
 
