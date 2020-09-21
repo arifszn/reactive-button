@@ -1,6 +1,6 @@
 .reactive-btn-wrapper, .reactive-btn {
 	--reactive-button-min-width: 100px;
-	--reactive-button-min-height: 35px;
+	--reactive-button-height: 35px;
 	--reactive-button-font-size: 14px;
 	--reactive-button-font-weight: 400;
 	--reactive-button-border-radius: 0px;
@@ -23,17 +23,17 @@
 .reactive-btn-wrapper {
 	display: inline-block;
 	min-width: var(--reactive-button-min-width);
-	min-height: var(--reactive-button-min-height);
+	height: var(--reactive-button-height);
 }
 
 .reactive-btn-wrapper.small {
 	min-width: calc(var(--reactive-button-min-width) - 25px);
-	min-height: calc(var(--reactive-button-min-height) - 5px);
+	height: calc(var(--reactive-button-height) - 5px);
 }
 
 .reactive-btn-wrapper.large {
 	min-width: calc(var(--reactive-button-min-width) + 25px);
-	min-height: calc(var(--reactive-button-min-height) + 5px);
+	height: calc(var(--reactive-button-height) + 5px);
 }
 
 .reactive-btn-wrapper.block {
@@ -137,8 +137,8 @@
 
 /* button spinner */
 .reactive-btn .reactive-btn-spinner {
-	width: calc(var(--reactive-button-min-height) - 22px);
-	height: calc(var(--reactive-button-min-height) - 22px);
+	width: calc(var(--reactive-button-height) - 22px);
+	height: calc(var(--reactive-button-height) - 22px);
 	margin-right: 3px;
 	border-top-color: inherit;
 	border-left-color: inherit;
@@ -175,8 +175,8 @@
 } */
 
 .reactive-btn-wrapper.small .reactive-btn .reactive-btn-spinner {
-	width: calc(var(--reactive-button-min-height) - 24px);
-	height: calc(var(--reactive-button-min-height) - 24px);
+	width: calc(var(--reactive-button-height) - 24px);
+	height: calc(var(--reactive-button-height) - 24px);
 }
 
 .reactive-btn-wrapper.small .reactive-btn {
@@ -190,8 +190,8 @@
 }
 
 .reactive-btn-wrapper.large .reactive-btn .reactive-btn-spinner {
-	width: calc(var(--reactive-button-min-height) - 20px);
-	height: calc(var(--reactive-button-min-height) - 20px);
+	width: calc(var(--reactive-button-height) - 20px);
+	height: calc(var(--reactive-button-height) - 20px);
 }
 
 
