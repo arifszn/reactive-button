@@ -49,6 +49,7 @@
 	width: 100%;
 	color: var(--reactive-button-text-color);
 	text-align: center;
+	line-height: 1.5;
 	text-decoration: none;
 	user-select: none;
 	-webkit-user-select: none;
