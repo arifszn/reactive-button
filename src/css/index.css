@@ -41,7 +41,6 @@
 }
 
 .reactive-btn {
-	display: flex;
 	margin-bottom: 0;
 	padding: 6px 14px 6px;
 	font-size: var(--reactive-button-font-size);
@@ -76,7 +75,6 @@
 	outline: none !important;
     align-items: center;
 	-webkit-box-pack: center;
-    justify-content: center;
     -webkit-box-align: center;
 }
 
