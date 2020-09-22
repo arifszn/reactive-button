@@ -60,7 +60,7 @@ yarn add reactive-button
 
 - Initialize a state with string value <code>'idle'</code> and assign it as <strong>'buttonState'</strong> prop. Now it will render an idle text.
 - When the button is clicked, set state's value to <code>'loading'</code>. 
-- When the task is completed, set state to <code>'success'</code> or <code>'error'</code> according to your need.
+- When the task is completed, set state to <code>'success'</code>, <code>'error'</code> or <code>'idle'</code> according to your need.
 
 Basic Usage:
 
