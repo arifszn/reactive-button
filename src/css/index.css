@@ -46,6 +46,7 @@
 	font-size: var(--reactive-button-font-size);
 	font-weight: var(--reactive-button-font-weight);
 	width: 100%;
+	min-height: 100%;
 	color: var(--reactive-button-text-color);
 	text-align: center;
 	line-height: 1.5;
