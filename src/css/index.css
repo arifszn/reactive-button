@@ -45,7 +45,7 @@
 	padding: 6px 14px 6px;
 	font-size: var(--reactive-button-font-size);
 	font-weight: var(--reactive-button-font-weight);
-	height: 100%;
+	width: 100%;
 	color: var(--reactive-button-text-color);
 	text-align: center;
 	line-height: 1.5;
