@@ -9,29 +9,28 @@ import pkg from './package.json';
 import { terser } from 'rollup-plugin-terser';
 
 export default {
-  input: './src/index.js',
-  output: [
-    {
-      file: pkg.main,
-      format: 'cjs',
-      exports: 'auto'
-    },
-    {
-      file: pkg.module,
-      format: 'esm'
-    }
-  ],
-  plugins: [
-      
-    external(),
-    terser(),
-    postcss(),
-    babel({
-      exclude: 'node_modules/**'
-    }),
-    resolve(),
-    commonjs(),
-    image(),
-    visualizer()
-  ]
+    input: './src/index.js',
+    output: [
+        {
+            file: pkg.main,
+            format: 'cjs',
+            exports: 'auto'
+        },
+        {
+            file: pkg.module,
+            format: 'esm'
+        }
+    ],
+    plugins: [
+        external(),
+        terser(),
+        postcss(),
+        babel({
+            exclude: 'node_modules/**'
+        }),
+        resolve(),
+        commonjs(),
+        image(),
+        visualizer()
+    ]
 };

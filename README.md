@@ -1,8 +1,10 @@
 <p align="center">
-  <a href="https://arifszn.github.io/reactive-button" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/logo/logo.png" alt="Reactive Button" title="Reactive Button" width="80"></a>
+    <a href="https://arifszn.github.io/reactive-button" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/logo/logo.png" alt="Reactive Button" title="Reactive Button" width="80"></a>
 </p>
 <h1 align="center">Reactive Button</h1>
 <p align="center">A React Button component that thinks like React.</p>
+<p align="center">https://arifszn.github.io/reactive-button</p>
+
 <p align="center">
     <a href="https://www.npmjs.com/package/reactive-button"><img src="https://img.shields.io/npm/v/reactive-button"/></a>
     <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
@@ -10,10 +12,9 @@
     <a href="https://github.com/arifszn/reactive-button/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/reactive-button"/></a>
     <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/maintainer-arifszn-informational" alt="Maintainer arifszn"/></a>
 </p>
-<p align="center">https://arifszn.github.io/reactive-button</p>
 
 <p align="center">
-  <a href="https://arifszn.github.io/reactive-button" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/preview.gif" alt="Reactive Button Preview" title="Reactive Button Preview"></a>
+    <a href="https://arifszn.github.io/reactive-button" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/preview.gif" alt="Reactive Button Preview" title="Reactive Button Preview"></a>
 </p>
 
 Reactive Button is a beautiful react component to replace the traditional boring buttons. Comes with customization on top. The goal is to let the users visualize what is happening after a button click.
@@ -69,21 +70,21 @@ import React, { useState } from 'react';
 import ReactiveButton from 'reactive-button';
 
 function App() {
-  const [state, setState] = useState('idle');
+    const [state, setState] = useState('idle');
 
-  const onClickHandler = () => {
-    setState('loading');
-    setTimeout(() => {
-      setState('success');
-    }, 2000);
-  }
+    const onClickHandler = () => {
+        setState('loading');
+        setTimeout(() => {
+            setState('success');
+        }, 2000);
+    }
 
-  return (
+    return (
         <ReactiveButton
-          buttonState={state}
-          onClick={onClickHandler}
+            buttonState={state}
+            onClick={onClickHandler}
         />
-  );
+    );
 }
 
 export default App;
@@ -96,40 +97,40 @@ import React, { useState } from 'react';
 import ReactiveButton from 'reactive-button';
 
 function App() {
-  const [state, setState] = useState('idle');
+    const [state, setState] = useState('idle');
 
-  const onClickHandler = () => {
-    setState('loading');
-    setTimeout(() => {
-      setState('success');
-    }, 2000);
-  }
+    const onClickHandler = () => {
+        setState('loading');
+        setTimeout(() => {
+            setState('success');
+        }, 2000);
+    }
 
-  return (
-    <ReactiveButton
-      buttonState={state}
-      onClick={onClickHandler}
-      color={'primary'}
-      idleText={'Button'}
-      loadingText={'Loading'}
-      successText={'Success'}
-      errorText={'Error'}
-      type={'button'}
-      className={'class1 class2'}
-      style={{ borderRadius: '5px' }}
-      outline={false}
-      shadow={false}
-      rounded={false}
-      size={'normal'}
-      block={false}
-      messageDuration={2000}
-      disabled={false}
-      buttonRef={null}
-      width={null}
-      height={null}
-      animation={true}
-    />
-  );
+    return (
+        <ReactiveButton
+            buttonState={state}
+            onClick={onClickHandler}
+            color={'primary'}
+            idleText={'Button'}
+            loadingText={'Loading'}
+            successText={'Success'}
+            errorText={'Error'}
+            type={'button'}
+            className={'class1 class2'}
+            style={{ borderRadius: '5px' }}
+            outline={false}
+            shadow={false}
+            rounded={false}
+            size={'normal'}
+            block={false}
+            messageDuration={2000}
+            disabled={false}
+            buttonRef={null}
+            width={null}
+            height={null}
+            animation={true}
+        />
+    );
 }
 
 export default App;
