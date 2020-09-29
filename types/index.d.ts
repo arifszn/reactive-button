@@ -29,7 +29,7 @@ export interface ReactiveButtonProps {
    * 
    * Default: 'primary'
    */
-  color?: string;
+  color?: color;
 
   /**
    * Button text when idle.
