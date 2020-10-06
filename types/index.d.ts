@@ -7,7 +7,7 @@ import React, { ReactNode } from 'react';
 export type buttonState = 'idle' | 'loading' | 'success' | 'error';
 export type color = 'primary' | 'dark' | 'light' | 'green' | 'red';
 export type type = 'button' | 'submit' | 'reset';
-export type size = 'normal' | 'small' | 'large';
+export type size = 'tiny' | 'small' | 'normal' | 'large';
 
 export interface ReactiveButtonProps {
   /**

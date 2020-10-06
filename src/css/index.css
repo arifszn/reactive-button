@@ -26,6 +26,11 @@
 	height: var(--reactive-button-min-height);
 }
 
+.reactive-btn-wrapper.tiny {
+	min-width: calc(var(--reactive-button-min-width) - 35px);
+	height: calc(var(--reactive-button-min-height) - 13px);
+}
+
 .reactive-btn-wrapper.small {
 	min-width: calc(var(--reactive-button-min-width) - 25px);
 	height: calc(var(--reactive-button-min-height) - 5px);
@@ -166,6 +171,10 @@
 } */
 
 
+.reactive-btn-wrapper.tiny .reactive-btn {
+	font-size: calc(var(--reactive-button-font-size) - 4px);
+	line-height: 1;
+}
 
 .reactive-btn-wrapper.small .reactive-btn {
 	font-size: calc(var(--reactive-button-font-size) - 2px);
