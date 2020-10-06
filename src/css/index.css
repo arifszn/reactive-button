@@ -28,7 +28,7 @@
 
 .reactive-btn-wrapper.tiny {
 	min-width: calc(var(--reactive-button-min-width) - 35px);
-	height: calc(var(--reactive-button-min-height) - 13px);
+	height: calc(var(--reactive-button-min-height) - 11px);
 }
 
 .reactive-btn-wrapper.small {
