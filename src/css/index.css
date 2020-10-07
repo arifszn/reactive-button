@@ -8,6 +8,7 @@
 	--reactive-progress-color: rgba(0, 0, 0, .15);
 
 	--reactive-button-primary-color: rgba(88, 103, 221, 1);
+	--reactive-button-secondary-color: rgba(108, 117, 125, 1);
 	--reactive-button-dark-color: rgba(66, 78, 106, 1);
 	--reactive-button-light-color: rgba(183, 186, 191, 1);
 	--reactive-button-green-color: rgba(37, 162, 51, 1);
@@ -15,10 +16,10 @@
 	--reactive-button-yellow-color: rgba(255, 193, 7, 1);
 	--reactive-button-teal-color: rgba(0, 181, 173, 1);
 	--reactive-button-violet-color: rgba(100, 53, 201, 1);
-	--reactive-button-orange-color: rgba(231, 107, 0, 1);
 	--reactive-button-blue-color: rgba(66, 153, 225, 1);
 
 	--reactive-progress-outline-primary-color: rgba(88, 103, 221, .3);
+	--reactive-progress-outline-secondary-color: rgba(108, 117, 125, .3);
 	--reactive-progress-outline-dark-color: rgba(66, 78, 106, .3);
 	--reactive-progress-outline-light-color: rgba(214, 212, 212, .3);
 	--reactive-progress-outline-green-color: rgba(37, 162, 51, .3);
@@ -26,7 +27,6 @@
 	--reactive-progress-outline-yellow-color: rgba(255, 193, 7, .3);
 	--reactive-progress-outline-teal-color: rgba(0, 181, 173, .3);
 	--reactive-progress-outline-violet-color: rgba(100, 53, 201, .3);
-	--reactive-progress-outline-orange-color: rgba(231, 107, 0, .3);
 	--reactive-progress-outline-blue-color: rgba(66, 153, 225, .3);
 }
 
@@ -222,6 +222,36 @@
 
 /* primary button ends */
 
+
+/* secondary button starts */
+.reactive-btn.secondary {
+	background: var(--reactive-button-secondary-color);
+}
+
+.reactive-btn.secondary.outline {
+	border-color: var(--reactive-button-secondary-color);
+	color: var(--reactive-button-secondary-color);
+	border: 1px solid var(--reactive-button-secondary-color);
+	box-shadow: inset 0 -1px 0 var(--reactive-button-secondary-color);
+	-webkit-box-shadow: inset 0 -1px 0 var(--reactive-button-secondary-color);
+	-moz-box-shadow: inset 0 -1px 0 var(--reactive-button-secondary-color);
+}
+
+.reactive-btn.secondary.outline .progress {
+	background-color: var(--reactive-progress-outline-secondary-color) !important;
+}
+
+.reactive-btn.secondary.outline:hover:not(:disabled):not(.disabled) {
+	box-shadow: inset 0 -3px 0 var(--reactive-button-secondary-color);
+	-webkit-box-shadow: inset 0 -3px 0 var(--reactive-button-secondary-color);
+	-moz-box-shadow: inset 0 -3px 0 var(--reactive-button-secondary-color);
+}
+
+.reactive-btn.secondary.shadow {
+	box-shadow: 0px 5px 16px -3px var(--reactive-button-secondary-color) !important;
+}
+
+/* secondary button ends */
 
 
 /* dark button starts */
@@ -448,37 +478,6 @@
 }
 
 /* violet button ends */
-
-
-/* orange button starts */
-.reactive-btn.orange {
-	background: var(--reactive-button-orange-color);
-}
-
-.reactive-btn.orange.outline {
-	border-color: var(--reactive-button-orange-color);
-	color: var(--reactive-button-orange-color);
-	border: 1px solid var(--reactive-button-orange-color);
-	box-shadow: inset 0 -1px 0 var(--reactive-button-orange-color);
-	-webkit-box-shadow: inset 0 -1px 0 var(--reactive-button-orange-color);
-	-moz-box-shadow: inset 0 -1px 0 var(--reactive-button-orange-color);
-}
-
-.reactive-btn.orange.outline .progress {
-	background-color: var(--reactive-progress-outline-orange-color) !important;
-}
-
-.reactive-btn.orange.outline:hover:not(:disabled):not(.disabled) {
-	box-shadow: inset 0 -3px 0 var(--reactive-button-orange-color);
-	-webkit-box-shadow: inset 0 -3px 0 var(--reactive-button-orange-color);
-	-moz-box-shadow: inset 0 -3px 0 var(--reactive-button-orange-color);
-}
-
-.reactive-btn.orange.shadow {
-	box-shadow: 0px 5px 16px -3px var(--reactive-button-orange-color) !important;
-}
-
-/* orange button ends */
 
 
 /* blue button starts */

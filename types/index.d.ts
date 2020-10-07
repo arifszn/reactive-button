@@ -5,7 +5,7 @@
 import React, { ReactNode } from 'react';
 
 export type buttonState = 'idle' | 'loading' | 'success' | 'error';
-export type color = 'primary' | 'dark' | 'light' | 'green' | 'red' | 'yellow' | 'teal' | 'violet' | 'orange' | 'blue';
+export type color = 'primary' | 'secondary' | 'dark' | 'light' | 'green' | 'red' | 'yellow' | 'teal' | 'violet' | 'blue';
 export type type = 'button' | 'submit' | 'reset';
 export type size = 'tiny' | 'small' | 'normal' | 'large';
 
