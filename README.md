@@ -57,6 +57,8 @@ yarn add reactive-button
 
 ## Usage
 
+For complete usage, visit the <a href="https://arifszn.github.io/reactive-button/docs/usage">docs</a>.
+
 > Below example demonstrates an asynchronous task. When clicking the button, an asynchronous task (e.g. Data fetch, form submit) will be processed and after processing, a success or error message will be displayed.
 
 - Initialize a state with string value <code>'idle'</code> and assign it as <strong>'buttonState'</strong> prop. Now it will render an idle text.
