@@ -4,8 +4,8 @@
   <ShortName>Reactive Button</ShortName>
   <Description>Search Reactive Button</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://arifszn.github.io/img/logo/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://arifszn.github.io/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://arifszn.github.io/opensearch.xml" />
-  <moz:SearchForm>https://arifszn.github.io</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://arifszn.github.io/reactive-button/img/logo/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://arifszn.github.io/reactive-button/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://arifszn.github.io/reactive-button/opensearch.xml" />
+  <moz:SearchForm>https://arifszn.github.io/reactive-button/</moz:SearchForm>
 </OpenSearchDescription>
