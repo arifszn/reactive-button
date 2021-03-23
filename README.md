@@ -1,20 +1,29 @@
 <p align="center">
-    <a href="https://arifszn.github.io/reactive-button" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/logo/logo.png" alt="Reactive Button" title="Reactive Button" width="80"></a>
+    <a href="https://arifszn.github.io/reactive-button" target="_blank">
+        <img src="https://arifszn.github.io/reactive-button/img/logo/logo.png" alt="Reactive Button" title="Reactive Button" width="80"/>
+    </a>
 </p>
+
 <h1 align="center">Reactive Button</h1>
 <p align="center">A React Button component that thinks like React.</p>
-<p align="center"><a href="https://arifszn.github.io/reactive-button">https://arifszn.github.io/reactive-button</a></p>
+<p align="center">
+    <a href="https://arifszn.github.io/reactive-button">https://arifszn.github.io/reactive-button</a>
+</p>
 
 <p align="center">
     <a href="https://www.npmjs.com/package/reactive-button"><img src="https://img.shields.io/npm/v/reactive-button"/></a>
     <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
     <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg"/>
     <a href="https://github.com/arifszn/reactive-button/blob/master/LICENSE"><img src="https://img.shields.io/github/license/arifszn/reactive-button"/></a>
-    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/maintainer-arifszn-informational" alt="Maintainer arifszn"/></a>
+    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-blueviolet" alt="Author arifszn"/></a>
 </p>
 
+<br/>
+
 <p align="center">
-    <a href="https://arifszn.github.io/reactive-button" target="_blank"><img src="https://arifszn.github.io/reactive-button/img/preview.gif" alt="Reactive Button Preview" title="Reactive Button Preview"></a>
+    <a href="https://arifszn.github.io/reactive-button" target="_blank">
+        <img src="https://arifszn.github.io/reactive-button/img/preview.gif" alt="Reactive Button Preview" title="Reactive Button Preview">
+    </a>
 </p>
 
 Reactive Button is a beautiful react component to replace the traditional boring buttons. Comes with customization on top. The goal is to let the users visualize what is happening after a button click.
@@ -34,6 +43,8 @@ Reactive Button is a beautiful react component to replace the traditional boring
 * [Installation](#installation)
 * [Usage](#usage)
 * [Available Props](#available-props)
+* [Contribute](#contribute)
+* [Thank You](#thank-you)
 * [Support](#support)
 * [License](#license)
 
@@ -165,6 +176,18 @@ export default App;
 | height         | string \| null    | Override button height     | null     |
 | animation         | boolean   | Button hover and click animation     | true     |
 
+
+## Contribute
+
+To contribute, clone this repo locally and commit your code on a new branch. Feel free to create an issue or make a pull request.
+
+
+## Thank You
+
+[![Stargazers repo roster for @arifszn/reactive-button](https://reporoster.com/stars/arifszn/reactive-button)](https://github.com/arifszn/reactive-button/stargazers)
+[![Forkers repo roster for @arifszn/reactive-button](https://reporoster.com/forks/arifszn/reactive-button)](https://github.com/arifszn/reactive-button/network/members)
+
+
 ## Support
 
 Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arifszn/reactive-button">Github</a>.
@@ -172,4 +195,4 @@ Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arif
 ## License
 
 <p>MIT Licensed.</p>
-<p>Copyright © <a href="https://arifszn.github.io">MD. Ariful Alam</a> 2020.</p>
+<p>Copyright © <a href="https://arifszn.github.io">MD. Ariful Alam</a> 2021.</p>
