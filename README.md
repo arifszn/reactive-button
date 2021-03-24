@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">Reactive Button</h1>
-<p align="center">A React Button component that thinks like React.</p>
+<p align="center">3D animated react button component with progress bar.</p>
 <p align="center">
     <a href="https://arifszn.github.io/reactive-button">https://arifszn.github.io/reactive-button</a>
 </p>
@@ -26,10 +26,11 @@
     </a>
 </p>
 
-Reactive Button is a beautiful react component to replace the traditional boring buttons. Comes with customization on top. The goal is to let the users visualize what is happening after a button click.
+Reactive Button is a beautiful 3D animated react component to replace the traditional boring buttons. Comes with progress bar and the goal is to let the users visualize what is happening after a button click.
 
-* Reactive
+* 3D
 * Animated
+* Progress indicator
 * Lightweight <small><code><20KB</code></small>
 * Supports icons
 * Zero dependency 
@@ -58,7 +59,7 @@ Reactive Button is a beautiful react component to replace the traditional boring
 
 Install via <a href="https://www.npmjs.com/package/reactive-button">NPM</a>
 ```
-npm install --save reactive-button
+npm install reactive-button
 ```
 
 Install via <a href="https://yarnpkg.com/package/reactive-button">Yarn</a>
