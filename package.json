@@ -1,6 +1,6 @@
 {
   "name": "reactive-button",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "A React Button component that thinks like React",
   "private": false,
   "homepage": "https://arifszn.github.io/reactive-button",
