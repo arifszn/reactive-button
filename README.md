@@ -14,8 +14,7 @@
     <a href="https://www.npmjs.com/package/reactive-button"><img src="https://img.shields.io/npm/v/reactive-button"/></a>
     <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
     <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg"/>
-    <a href="https://github.com/arifszn/reactive-button/blob/master/LICENSE"><img src="https://img.shields.io/github/license/arifszn/reactive-button"/></a>
-    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-blueviolet" alt="Author arifszn"/></a>
+    <a href="https://github.com/arifszn/reactive-button/blob/main/LICENSE"><img src="https://img.shields.io/github/license/arifszn/reactive-button"/></a>
 </p>
 
 <br/>
@@ -38,24 +37,13 @@ Reactive Button is a beautiful 3D animated react component to replace the tradit
 * Super easy to customize
 * And much more !
 
-## Table of Contents
-
-* [Resources](#resources)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Available Props](#available-props)
-* [Contribute](#contribute)
-* [Thank You](#thank-you)
-* [Support](#support)
-* [License](#license)
-
 ## Resources
 
 - [Demo](https://arifszn.github.io/reactive-button)
 - [Documentation](https://arifszn.github.io/reactive-button/docs)
 - [Playground](https://arifszn.github.io/reactive-button/docs/playground)
 
-# Installation
+## Installation
 
 Install via <a href="https://www.npmjs.com/package/reactive-button">NPM</a>
 ```
@@ -77,7 +65,8 @@ For complete usage, visit the <a href="https://arifszn.github.io/reactive-button
 - When the button is clicked, set state's value to <code>'loading'</code>. 
 - When the task is completed, set state to <code>'success'</code>, <code>'error'</code> or <code>'idle'</code> according to your need.
 
-Basic Usage:
+<details>
+<summary>Basic Usage:</summary>
 
 ```js
 import React, { useState } from 'react';
@@ -104,7 +93,10 @@ function App() {
 export default App;
 ```
 
-Full Usage:
+</details>
+
+<details>
+<summary>Full Usage:</summary>
 
 ```js
 import React, { useState } from 'react';
@@ -149,7 +141,8 @@ function App() {
 
 export default App;
 ```
-> For non asynchronous task, state management is not needed. Use as like normal button.
+
+</details>
 
 ## Available Props 
 
@@ -186,12 +179,11 @@ To contribute, clone this repo locally and commit your code on a new branch. Fee
 ## Thank You
 
 [![Stargazers repo roster for @arifszn/reactive-button](https://reporoster.com/stars/arifszn/reactive-button)](https://github.com/arifszn/reactive-button/stargazers)
-[![Forkers repo roster for @arifszn/reactive-button](https://reporoster.com/forks/arifszn/reactive-button)](https://github.com/arifszn/reactive-button/network/members)
 
 
 ## Support
 
-Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arifszn/reactive-button">Github</a>.
+Show your ❤️ and support by giving a ⭐.
 
 ## License
 
