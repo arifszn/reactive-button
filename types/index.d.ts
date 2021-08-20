@@ -1,6 +1,6 @@
 // Type definitions for Reactive Button
 // Project https://github.com/arifszn/reactive-button
-// Author: Ariful Alam <swazan.arif@gmail.com>
+// Author: Ariful Alam <arifulalamszn@gmail.com>
 
 import React, { ReactNode } from 'react';
 
