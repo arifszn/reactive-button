@@ -66,6 +66,8 @@ For complete usage, visit the <a href="https://arifszn.github.io/reactive-button
 - When the button is clicked, set <strong>'buttonState'</strong>'s value to <code>'loading'</code>. 
 - When the task is completed, set <strong>'buttonState'</strong> to <code>'success'</code>, <code>'error'</code> or <code>'idle'</code> according to your need.
 
+<br/>
+    
 <details>
 <summary>Basic Usage:</summary>
 
