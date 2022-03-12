@@ -1,42 +1,31 @@
 <p align="center">
-  <a href="https://arifszn.github.io/reactive-button" target="_blank">
-    <img 
-      src="https://arifszn.github.io/reactive-button/img/logo/logo.png"
-      alt="Reactive Button"
-      title="Reactive Button"
-      width="80"
-    />
-  </a>
+    <a href="https://arifszn.github.io/reactive-button" target="_blank">
+        <img src="https://arifszn.github.io/reactive-button/img/logo/logo.png" alt="Reactive Button" title="Reactive Button" width="80"/>
+    </a>
 </p>
 
 <h1 align="center">Reactive Button</h1>
 <p align="center">3D animated react button component with progress bar.</p>
 <p align="center">
-  <a href="https://arifszn.github.io/reactive-button">
-    https://arifszn.github.io/reactive-button
-  </a>
+    <a href="https://arifszn.github.io/reactive-button">https://arifszn.github.io/reactive-button</a>
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/reactive-button">
-    <img src="https://img.shields.io/npm/v/reactive-button"/>
-  </a>
-  <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
-  <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg"/>
-  <a href="https://github.com/arifszn/reactive-button/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/arifszn/reactive-button"/>
-  </a>
+    <a href="https://www.npmjs.com/package/reactive-button"><img src="https://img.shields.io/npm/v/reactive-button"/></a>
+    <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
+    <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg"/>
+    <a href="https://github.com/arifszn/reactive-button/blob/main/LICENSE"><img src="https://img.shields.io/github/license/arifszn/reactive-button"/></a>
 </p>
 
 <br/>
 
 <p align="center">
-  <a href="https://arifszn.github.io/reactive-button" target="_blank">
-    <img src="https://arifszn.github.io/reactive-button/img/preview.gif" alt="Reactive Button Preview" title="Reactive Button Preview">
-  </a>
+    <a href="https://arifszn.github.io/reactive-button" target="_blank">
+        <img src="https://arifszn.github.io/reactive-button/img/preview.gif" alt="Reactive Button Preview" title="Reactive Button Preview">
+    </a>
 </p>
 
-**Reactive Button** is a 3D animated react component to replace the traditional boring buttons. Change your button style without adding any UI framework. Comes with progress bar and the goal is to let the users visualize what is happening after a button click.
+Reactive Button is a beautiful 3D animated react component to replace the traditional boring buttons. Change your button style without adding any UI framework. Comes with progress bar and the goal is to let the users visualize what is happening after a button click.
 
 - 3D
 - Animated
@@ -85,7 +74,7 @@ For complete usage, visit the <a href="https://arifszn.github.io/reactive-button
 <summary>Basic Usage:</summary>
 
 ```js
-import { useState } from "react";
+import React, { useState } from "react";
 import ReactiveButton from "reactive-button";
 
 function App() {
