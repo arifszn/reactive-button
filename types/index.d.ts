@@ -1,28 +1,29 @@
 // Type definitions for Reactive Button
 // Project https://github.com/arifszn/reactive-button
 // Author: Ariful Alam <arifulalamszn@gmail.com>
+
 import {
   CSSProperties,
   Component,
   MouseEvent,
   MutableRefObject,
   ReactNode,
-} from 'react';
+} from "react";
 
-export type buttonState = 'idle' | 'loading' | 'success' | 'error';
-export type type = 'button' | 'submit' | 'reset';
-export type size = 'tiny' | 'small' | 'normal' | 'large';
+export type buttonState = "idle" | "loading" | "success" | "error";
+export type type = "button" | "submit" | "reset";
+export type size = "tiny" | "small" | "normal" | "large";
 export type color =
-  | 'primary'
-  | 'secondary'
-  | 'dark'
-  | 'light'
-  | 'green'
-  | 'red'
-  | 'yellow'
-  | 'teal'
-  | 'violet'
-  | 'blue';
+  | "primary"
+  | "secondary"
+  | "dark"
+  | "light"
+  | "green"
+  | "red"
+  | "yellow"
+  | "teal"
+  | "violet"
+  | "blue";
 
 export interface ReactiveButtonProps {
   /**
