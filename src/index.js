@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/index.css";
 
 const loadingIcon = (
@@ -123,25 +123,25 @@ const ReactiveButton = (props) => {
       return idleText;
     } else if (currentButtonState === "loading") {
       return loadingText === "Loading" ? (
-        <Fragment>
+        <React.Fragment>
           {loadingIcon} {loadingText}
-        </Fragment>
+        </React.Fragment>
       ) : (
         loadingText
       );
     } else if (currentButtonState === "success") {
       return successText === "Success" ? (
-        <Fragment>
+        <React.Fragment>
           {successIcon} {successText}
-        </Fragment>
+        </React.Fragment>
       ) : (
         successText
       );
     } else if (currentButtonState === "error") {
       return errorText === "Error" ? (
-        <Fragment>
+        <React.Fragment>
           {errorIcon} {errorText}
-        </Fragment>
+        </React.Fragment>
       ) : (
         errorText
       );
@@ -149,7 +149,7 @@ const ReactiveButton = (props) => {
   };
 
   return (
-    <Fragment>
+    <React.Fragment>
       <span
         className={`reactive-btn-wrapper ${size}${props.block ? " block" : ""}`}
         style={{ width: props.width, height: props.height }}
@@ -169,11 +169,11 @@ const ReactiveButton = (props) => {
         >
           <span className="progress"></span>
           <span className="content">
-            <Fragment>{getButtonText(buttonState)}</Fragment>
+            <React.Fragment>{getButtonText(buttonState)}</React.Fragment>
           </span>
         </button>
       </span>
-    </Fragment>
+    </React.Fragment>
   );
 };
 
