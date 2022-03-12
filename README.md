@@ -110,7 +110,7 @@ export default App;
 <summary>Full Usage:</summary>
 
 ```js
-import React, { useState } from "react";
+import { useState } from "react";
 import ReactiveButton from "reactive-button";
 
 function App() {
