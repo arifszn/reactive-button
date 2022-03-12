@@ -31,7 +31,7 @@ export interface ReactiveButtonProps {
    *
    * Default: 'idle'
    */
-  buttonState?: buttonState;
+  buttonState?: buttonState | string;
 
   /**
    * Callback function when clicking button.
@@ -45,7 +45,7 @@ export interface ReactiveButtonProps {
    *
    * Default: 'primary'
    */
-  color?: color;
+  color?: color | string;
 
   /**
    * Button text when idle.
@@ -80,7 +80,7 @@ export interface ReactiveButtonProps {
    *
    * Default: 'button'
    */
-  type?: type;
+  type?: type | string;
 
   /**
    * Button classnames.
@@ -122,7 +122,7 @@ export interface ReactiveButtonProps {
    *
    * Default: 'normal'
    */
-  size?: size;
+  size?: size | string;
 
   /**
    * Block button.
