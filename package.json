@@ -1,6 +1,6 @@
 {
   "name": "reactive-button",
-  "version": "1.3.9",
+  "version": "1.4.0",
   "description": "3D animated react button component with progress bar",
   "private": false,
   "homepage": "https://github.com/arifszn/reactive-button#readme",
