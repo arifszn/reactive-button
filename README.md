@@ -18,6 +18,9 @@
   </a>
   <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
   <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg"/>
+  <a href="https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
+  </a>
   <a href="https://github.com/arifszn/reactive-button/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/arifszn/reactive-button"/>
   </a>
@@ -35,11 +38,13 @@
 
 - 3D
 - Animated
-- Progress indicator
-- Lightweight <small>`<20KB`</small>
 - Supports icons
 - Zero dependency
+- Progress indicator
+- Notification message
+- Supports TypeScript
 - Super easy to setup
+- Extremely lightweight
 - Super easy to customize
 - And much more !
 
@@ -76,8 +81,7 @@ For complete usage, visit the <a href="https://arifszn.github.io/reactive-button
 
 <br/>
     
-<details>
-<summary>Basic Usage:</summary>
+### Basic Usage
 
 ```js
 import { useState } from "react";
@@ -99,10 +103,7 @@ function App() {
 export default App;
 ```
 
-</details>
-
-<details>
-<summary>Full Usage:</summary>
+### Full Usage
 
 ```js
 import { useState } from "react";
@@ -148,37 +149,35 @@ function App() {
 export default App;
 ```
 
-</details>
-
 ## Available Props
 
-| Props           |         Type          | Description                                                                                                                       |   Default    |
-| :-------------- | :-------------------: | :-------------------------------------------------------------------------------------------------------------------------------- | :----------: |
-| buttonState     |       `string`        | `'idle'` \| `'loading'` \| `'success'` \| `'error'`                                                                               |   `'idle'`   |
-| onClick         |      `function`       | Callback function when clicking button                                                                                            |  `() => {}`  |
+| Props           |         Type          |                                                            Description                                                            |   Default    |
+| :-------------- | :-------------------: | :-------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+| buttonState     |       `string`        |                                        `'idle'` \| `'loading'` \| `'success'` \| `'error'`                                        |   `'idle'`   |
+| onClick         |      `function`       |                                              Callback function when clicking button                                               |  `() => {}`  |
 | color           |       `string`        | `'primary'` \| `'secondary'` \| `'dark'` \| `'light'` \| `'green'` \| `'red'` \| `'yellow'` \| `'teal'` \| `'violet'` \| `'blue'` | `'primary'`  |
-| idleText        | `string \| ReactNode` | Button text when idle                                                                                                             | `'Click Me'` |
-| loadingText     | `string \| ReactNode` | Button text when loading                                                                                                          | `'Loading'`  |
-| successText     | `string \| ReactNode` | Button text when loading successful                                                                                               | `'Success'`  |
-| errorText       | `string \| ReactNode` | Button text when loading failed                                                                                                   |  `'Error'`   |
-| type            |       `string`        | `'button'` \| `'submit'` \| `'reset'`                                                                                             |  `'button'`  |
-| className       |       `string`        | Button classnames                                                                                                                 |     `''`     |
-| style           | `React.CSSProperties` | Custom style                                                                                                                      |     `{}`     |
-| outline         |       `boolean`       | Enable outline effect                                                                                                             |   `false`    |
-| shadow          |       `boolean`       | Enable shadow effect                                                                                                              |   `false`    |
-| rounded         |       `boolean`       | Enable rounded button                                                                                                             |   `false`    |
-| size            |       `string`        | `'tiny'` \| `'small'` \| `'normal'` \| `'large'`                                                                                  |  `'normal'`  |
-| block           |       `boolean`       | Block Button                                                                                                                      |   `false`    |
-| messageDuration |       `number`        | Success/Error message duration in millisecond                                                                                     |    `2000`    |
-| disabled        |       `boolean`       | Disable button                                                                                                                    |   `false`    |
-| buttonRef       |  `React.Ref \| null`  | Button reference                                                                                                                  |    `null`    |
-| width           |   `string \| null`    | Override button width                                                                                                             |    `null`    |
-| height          |   `string \| null`    | Override button height                                                                                                            |    `null`    |
-| animation       |       `boolean`       | Button hover and click animation                                                                                                  |    `true`    |
+| idleText        | `string \| ReactNode` |                                                       Button text when idle                                                       | `'Click Me'` |
+| loadingText     | `string \| ReactNode` |                                                     Button text when loading                                                      | `'Loading'`  |
+| successText     | `string \| ReactNode` |                                                Button text when loading successful                                                | `'Success'`  |
+| errorText       | `string \| ReactNode` |                                                  Button text when loading failed                                                  |  `'Error'`   |
+| type            |       `string`        |                                               `'button'` \| `'submit'` \| `'reset'`                                               |  `'button'`  |
+| className       |       `string`        |                                                         Button classnames                                                         |     `''`     |
+| style           | `React.CSSProperties` |                                                           Custom style                                                            |     `{}`     |
+| outline         |       `boolean`       |                                                       Enable outline effect                                                       |   `false`    |
+| shadow          |       `boolean`       |                                                       Enable shadow effect                                                        |   `false`    |
+| rounded         |       `boolean`       |                                                       Enable rounded button                                                       |   `false`    |
+| size            |       `string`        |                                         `'tiny'` \| `'small'` \| `'normal'` \| `'large'`                                          |  `'normal'`  |
+| block           |       `boolean`       |                                                           Block Button                                                            |   `false`    |
+| messageDuration |       `number`        |                                           Success/Error message duration in millisecond                                           |    `2000`    |
+| disabled        |       `boolean`       |                                                          Disable button                                                           |   `false`    |
+| buttonRef       |  `React.Ref \| null`  |                                                         Button reference                                                          |    `null`    |
+| width           |   `string \| null`    |                                                       Override button width                                                       |    `null`    |
+| height          |   `string \| null`    |                                                      Override button height                                                       |    `null`    |
+| animation       |       `boolean`       |                                                 Button hover and click animation                                                  |    `true`    |
 
 ## Contribute
 
-To contribute, clone this repo locally and commit your code to a new branch. Feel free to create an issue or make a pull request.
+To contribute, see the [Contributing guide](https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md).
 
 ## Support
 
