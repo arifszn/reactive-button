@@ -44,3 +44,13 @@ Running the `build` task will create the `dist` version of the project.
 ```sh
 npm run build
 ```
+
+### Project Structure
+
+```text
+root
+├── dist
+└── src
+    └── css
+└── types
+```
