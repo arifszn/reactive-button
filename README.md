@@ -11,11 +11,6 @@
 
 <h1 align="center">Reactive Button</h1>
 <p align="center">3D animated react button component with progress bar.</p>
-<p align="center">
-  <a href="https://arifszn.github.io/reactive-button">
-    https://arifszn.github.io/reactive-button
-  </a>
-</p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/reactive-button">
@@ -23,6 +18,9 @@
   </a>
   <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
   <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg"/>
+  <a href="https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
+  </a>
   <a href="https://github.com/arifszn/reactive-button/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/arifszn/reactive-button"/>
   </a>
@@ -40,11 +38,13 @@
 
 - 3D
 - Animated
-- Progress indicator
-- Lightweight <small><code><20KB</code></small>
 - Supports icons
 - Zero dependency
+- Progress indicator
+- Notification message
+- Supports TypeScript
 - Super easy to setup
+- Extremely lightweight
 - Super easy to customize
 - And much more !
 
@@ -73,16 +73,15 @@ yarn add reactive-button
 
 For complete usage, visit the <a href="https://arifszn.github.io/reactive-button/docs/usage">docs</a>.
 
-> Below example demonstrates an asynchronous task. When clicking the button, an asynchronous task (e.g. Data fetch, form submit) will be processed and after processing, a success or error message will be displayed.
+> The below example demonstrates an asynchronous task. When clicking the button, an asynchronous task (e.g. Data fetch, form submit) will be processed and after processing, a success or error message will be displayed.
 
-- Initialize a state with string value <code>'idle'</code> and assign it as <strong>'buttonState'</strong> prop. Now it will render an idle text.
-- When the button is clicked, set <strong>'buttonState'</strong>'s value to <code>'loading'</code>.
-- When the task is completed, set <strong>'buttonState'</strong> to <code>'success'</code>, <code>'error'</code> or <code>'idle'</code> according to your need.
+- Initialize a state with string value `'idle'` and assign it as <strong>'buttonState'</strong> prop. Now it will render an idle text.
+- When the button is clicked, set <strong>'buttonState'</strong>'s value to `'loading'`.
+- When the task is completed, set <strong>'buttonState'</strong> to `'success'`, `'error'` or `'idle'` according to your need.
 
 <br/>
     
-<details>
-<summary>Basic Usage:</summary>
+### Basic Usage
 
 ```js
 import { useState } from "react";
@@ -104,10 +103,7 @@ function App() {
 export default App;
 ```
 
-</details>
-
-<details>
-<summary>Full Usage:</summary>
+### Full Usage
 
 ```js
 import { useState } from "react";
@@ -153,37 +149,35 @@ function App() {
 export default App;
 ```
 
-</details>
-
 ## Available Props
 
-| Props           |        Type         | Description                                                                                     |         Default         |
-| :-------------- | :-----------------: | :---------------------------------------------------------------------------------------------- | :---------------------: |
-| buttonState     |       string        | <code>'idle'</code> \| <code>'loading'</code> \| <code>'success'</code> \| <code>'error'</code> |   <code>'idle'</code>   |
-| onClick         |      function       | Callback function when clicking button                                                          |  <code>() => {}</code>  |
-| color           |       string        | Button color                                                                                    | <code>'primary'</code>  |
-| idleText        | string \| ReactNode | Button text when idle                                                                           | <code>'Click Me'</code> |
-| loadingText     | string \| ReactNode | Button text when loading                                                                        | <code>'Loading'</code>  |
-| successText     | string \| ReactNode | Button text when loading successful                                                             | <code>'Success'</code>  |
-| errorText       | string \| ReactNode | Button text when loading failed                                                                 |  <code>'Error'</code>   |
-| type            |       string        | Button type attribute                                                                           |  <code>'button'</code>  |
-| className       |       string        | Button classnames                                                                               |     <code>''</code>     |
-| style           | React.CSSProperties | Custom style                                                                                    |     <code>{}</code>     |
-| outline         |       boolean       | Enable outline effect                                                                           |   <code>false</code>    |
-| shadow          |       boolean       | Enable shadow effect                                                                            |   <code>false</code>    |
-| rounded         |       boolean       | Enable rounded button                                                                           |   <code>false</code>    |
-| size            |       string        | Button size                                                                                     |  <code>'normal'</code>  |
-| block           |       boolean       | Block Button                                                                                    |   <code>false</code>    |
-| messageDuration |       number        | Success/Error message duration in millisecond                                                   |    <code>2000</code>    |
-| disabled        |       boolean       | Disable button                                                                                  |   <code>false</code>    |
-| buttonRef       |  React.Ref \| null  | Button reference                                                                                |    <code>null</code>    |
-| width           |   string \| null    | Override button width                                                                           |    <code>null</code>    |
-| height          |   string \| null    | Override button height                                                                          |    <code>null</code>    |
-| animation       |       boolean       | Button hover and click animation                                                                |    <code>true</code>    |
+| Props           |         Type          |                                                            Description                                                            |   Default    |
+| :-------------- | :-------------------: | :-------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+| buttonState     |       `string`        |                                        `'idle'` \| `'loading'` \| `'success'` \| `'error'`                                        |   `'idle'`   |
+| onClick         |      `function`       |                                              Callback function when clicking button                                               |  `() => {}`  |
+| color           |       `string`        | `'primary'` \| `'secondary'` \| `'dark'` \| `'light'` \| `'green'` \| `'red'` \| `'yellow'` \| `'teal'` \| `'violet'` \| `'blue'` | `'primary'`  |
+| idleText        | `string \| ReactNode` |                                                       Button text when idle                                                       | `'Click Me'` |
+| loadingText     | `string \| ReactNode` |                                                     Button text when loading                                                      | `'Loading'`  |
+| successText     | `string \| ReactNode` |                                                Button text when loading successful                                                | `'Success'`  |
+| errorText       | `string \| ReactNode` |                                                  Button text when loading failed                                                  |  `'Error'`   |
+| type            |       `string`        |                                               `'button'` \| `'submit'` \| `'reset'`                                               |  `'button'`  |
+| className       |       `string`        |                                                         Button classnames                                                         |     `''`     |
+| style           | `React.CSSProperties` |                                                           Custom style                                                            |     `{}`     |
+| outline         |       `boolean`       |                                                       Enable outline effect                                                       |   `false`    |
+| shadow          |       `boolean`       |                                                       Enable shadow effect                                                        |   `false`    |
+| rounded         |       `boolean`       |                                                       Enable rounded button                                                       |   `false`    |
+| size            |       `string`        |                                         `'tiny'` \| `'small'` \| `'normal'` \| `'large'`                                          |  `'normal'`  |
+| block           |       `boolean`       |                                                           Block Button                                                            |   `false`    |
+| messageDuration |       `number`        |                                           Success/Error message duration in millisecond                                           |    `2000`    |
+| disabled        |       `boolean`       |                                                          Disable button                                                           |   `false`    |
+| buttonRef       |  `React.Ref \| null`  |                                                         Button reference                                                          |    `null`    |
+| width           |   `string \| null`    |                                                       Override button width                                                       |    `null`    |
+| height          |   `string \| null`    |                                                      Override button height                                                       |    `null`    |
+| animation       |       `boolean`       |                                                 Button hover and click animation                                                  |    `true`    |
 
 ## Contribute
 
-To contribute, clone this repo locally and commit your code on a new branch. Feel free to create an issue or make a pull request.
+To contribute, see the [Contributing guide](https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md).
 
 ## Support
 

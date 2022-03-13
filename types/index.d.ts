@@ -10,28 +10,13 @@ import {
   ReactNode,
 } from "react";
 
-export type buttonState = "idle" | "loading" | "success" | "error";
-export type type = "button" | "submit" | "reset";
-export type size = "tiny" | "small" | "normal" | "large";
-export type color =
-  | "primary"
-  | "secondary"
-  | "dark"
-  | "light"
-  | "green"
-  | "red"
-  | "yellow"
-  | "teal"
-  | "violet"
-  | "blue";
-
 export interface ReactiveButtonProps {
   /**
-   * Current button state.
+   * Current button state. Values: 'idle' | 'loading' | 'success' | 'error'
    *
-   * Default: 'idle'
+   * Default: 'idle'.
    */
-  buttonState?: buttonState | string;
+  buttonState?: string;
 
   /**
    * Callback function when clicking button.
@@ -41,11 +26,11 @@ export interface ReactiveButtonProps {
   onClick?: (event: MouseEvent) => void;
 
   /**
-   * Button color.
+   * Button color. values: 'primary' | 'secondary' | 'dark' | 'light' | 'green' | 'red' | 'yellow' | 'teal' | 'violet' | 'blue'
    *
    * Default: 'primary'
    */
-  color?: color | string;
+  color?: string;
 
   /**
    * Button text when idle.
@@ -76,11 +61,11 @@ export interface ReactiveButtonProps {
   errorText?: string | ReactNode;
 
   /**
-   * Button type attribute.
+   * Button type attribute. Values: 'button' | 'submit' | 'reset'
    *
    * Default: 'button'
    */
-  type?: type | string;
+  type?: string;
 
   /**
    * Button classnames.
@@ -118,11 +103,11 @@ export interface ReactiveButtonProps {
   rounded?: boolean;
 
   /**
-   * Button size.
+   * Button size. Values: 'tiny' | 'small' | 'normal' | 'large'
    *
    * Default: 'normal'
    */
-  size?: size | string;
+  size?: string;
 
   /**
    * Block button.
