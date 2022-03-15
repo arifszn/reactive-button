@@ -1,6 +1,9 @@
 src
 demo
 .babelrc
+.eslintignore
 .eslintrc.js
+.prettierignore
+.prettierrc
 webpack.config.js
 stats.html
