@@ -84,16 +84,16 @@ For complete usage, visit the <a href="https://arifszn.github.io/reactive-button
 ### Basic Usage
 
 ```js
-import { useState } from "react";
-import ReactiveButton from "reactive-button";
+import { useState } from 'react';
+import ReactiveButton from 'reactive-button';
 
 function App() {
-  const [state, setState] = useState("idle");
+  const [state, setState] = useState('idle');
 
   const onClickHandler = () => {
-    setState("loading");
+    setState('loading');
     setTimeout(() => {
-      setState("success");
+      setState('success');
     }, 2000);
   };
 
@@ -106,16 +106,16 @@ export default App;
 ### Full Usage
 
 ```js
-import { useState } from "react";
-import ReactiveButton from "reactive-button";
+import { useState } from 'react';
+import ReactiveButton from 'reactive-button';
 
 function App() {
-  const [state, setState] = useState("idle");
+  const [state, setState] = useState('idle');
 
   const onClickHandler = () => {
-    setState("loading");
+    setState('loading');
     setTimeout(() => {
-      setState("success");
+      setState('success');
     }, 2000);
   };
 
@@ -123,18 +123,18 @@ function App() {
     <ReactiveButton
       buttonState={state}
       onClick={onClickHandler}
-      color={"primary"}
-      idleText={"Button"}
-      loadingText={"Loading"}
-      successText={"Success"}
-      errorText={"Error"}
-      type={"button"}
-      className={"class1 class2"}
-      style={{ borderRadius: "5px" }}
+      color={'primary'}
+      idleText={'Button'}
+      loadingText={'Loading'}
+      successText={'Success'}
+      errorText={'Error'}
+      type={'button'}
+      className={'class1 class2'}
+      style={{ borderRadius: '5px' }}
       outline={false}
       shadow={false}
       rounded={false}
-      size={"normal"}
+      size={'normal'}
       block={false}
       messageDuration={2000}
       disabled={false}
@@ -151,29 +151,29 @@ export default App;
 
 ## Available Props
 
-|      Props      |         Type          |                                                            Description                                                            |   Default    |
-| :-------------: | :-------------------: | :-------------------------------------------------------------------------------------------------------------------------------: | :----------: |
-|   buttonState   |       `string`        |                                        `'idle'` \| `'loading'` \| `'success'` \| `'error'`                                        |   `'idle'`   |
-|     onClick     |      `function`       |                                              Callback function when clicking button                                               |  `() => {}`  |
-|      color      |       `string`        | `'primary'` \| `'secondary'` \| `'dark'` \| `'light'` \| `'green'` \| `'red'` \| `'yellow'` \| `'teal'` \| `'violet'` \| `'blue'` | `'primary'`  |
-|    idleText     | `string \| ReactNode` |                                                       Button text when idle                                                       | `'Click Me'` |
-|   loadingText   | `string \| ReactNode` |                                                     Button text when loading                                                      | `'Loading'`  |
-|   successText   | `string \| ReactNode` |                                                Button text when loading successful                                                | `'Success'`  |
-|    errorText    | `string \| ReactNode` |                                                  Button text when loading failed                                                  |  `'Error'`   |
-|      type       |       `string`        |                                               `'button'` \| `'submit'` \| `'reset'`                                               |  `'button'`  |
-|    className    |       `string`        |                                                         Button classnames                                                         |     `''`     |
-|      style      | `React.CSSProperties` |                                                           Custom style                                                            |     `{}`     |
-|     outline     |       `boolean`       |                                                       Enable outline effect                                                       |   `false`    |
-|     shadow      |       `boolean`       |                                                       Enable shadow effect                                                        |   `false`    |
-|     rounded     |       `boolean`       |                                                       Enable rounded button                                                       |   `false`    |
-|      size       |       `string`        |                                         `'tiny'` \| `'small'` \| `'normal'` \| `'large'`                                          |  `'normal'`  |
-|      block      |       `boolean`       |                                                           Block Button                                                            |   `false`    |
-| messageDuration |       `number`        |                                           Success/Error message duration in millisecond                                           |    `2000`    |
-|    disabled     |       `boolean`       |                                                          Disable button                                                           |   `false`    |
-|    buttonRef    |  `React.Ref \| null`  |                                                         Button reference                                                          |    `null`    |
-|      width      |   `string \| null`    |                                                       Override button width                                                       |    `null`    |
-|     height      |   `string \| null`    |                                                      Override button height                                                       |    `null`    |
-|    animation    |       `boolean`       |                                                 Button hover and click animation                                                  |    `true`    |
+|      Props      |          Type           |                                                            Description                                                            |   Default    |
+| :-------------: | :---------------------: | :-------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|   buttonState   |        `string`         |                                        `'idle'` \| `'loading'` \| `'success'` \| `'error'`                                        |   `'idle'`   |
+|     onClick     |       `function`        |                                              Callback function when clicking button                                               |  `() => {}`  |
+|      color      |        `string`         | `'primary'` \| `'secondary'` \| `'dark'` \| `'light'` \| `'green'` \| `'red'` \| `'yellow'` \| `'teal'` \| `'violet'` \| `'blue'` | `'primary'`  |
+|    idleText     | `string` \| `ReactNode` |                                                       Button text when idle                                                       | `'Click Me'` |
+|   loadingText   | `string` \| `ReactNode` |                                                     Button text when loading                                                      | `'Loading'`  |
+|   successText   | `string` \| `ReactNode` |                                                Button text when loading successful                                                | `'Success'`  |
+|    errorText    | `string` \| `ReactNode` |                                                  Button text when loading failed                                                  |  `'Error'`   |
+|      type       |        `string`         |                                               `'button'` \| `'submit'` \| `'reset'`                                               |  `'button'`  |
+|    className    |        `string`         |                                                         Button classnames                                                         |     `''`     |
+|      style      |  `React.CSSProperties`  |                                                           Custom style                                                            |     `{}`     |
+|     outline     |        `boolean`        |                                                       Enable outline effect                                                       |   `false`    |
+|     shadow      |        `boolean`        |                                                       Enable shadow effect                                                        |   `false`    |
+|     rounded     |        `boolean`        |                                                       Enable rounded button                                                       |   `false`    |
+|      size       |        `string`         |                                         `'tiny'` \| `'small'` \| `'normal'` \| `'large'`                                          |  `'normal'`  |
+|      block      |        `boolean`        |                                                           Block Button                                                            |   `false`    |
+| messageDuration |        `number`         |                                           Success/Error message duration in millisecond                                           |    `2000`    |
+|    disabled     |        `boolean`        |                                                          Disable button                                                           |   `false`    |
+|    buttonRef    |  `React.Ref` \| `null`  |                                                         Button reference                                                          |    `null`    |
+|      width      |   `string` \| `null`    |                                                       Override button width                                                       |    `null`    |
+|     height      |   `string` \| `null`    |                                                      Override button height                                                       |    `null`    |
+|    animation    |        `boolean`        |                                                 Button hover and click animation                                                  |    `true`    |
 
 ## Contribute
 

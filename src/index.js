@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import "./css/index.css";
+import React, { useEffect, useState } from 'react';
+import './css/index.css';
+import PropTypes from 'prop-types';
 
 const loadingIcon = (
   <svg
@@ -56,27 +57,27 @@ const errorIcon = (
 );
 
 const ReactiveButton = (props) => {
-  const color = props.color ? props.color : "primary";
+  const color = props.color ? props.color : 'primary';
 
-  const idleText = props.idleText ? props.idleText : "Click Me";
+  const idleText = props.idleText ? props.idleText : 'Click Me';
 
   const loadingText =
-    props.loadingText && props.loadingText !== ""
+    props.loadingText && props.loadingText !== ''
       ? props.loadingText
-      : "Loading";
+      : 'Loading';
 
   const successText =
-    props.successText && props.successText !== ""
+    props.successText && props.successText !== ''
       ? props.successText
-      : "Success";
+      : 'Success';
 
   const errorText =
-    props.errorText && props.errorText !== "" ? props.errorText : "Error";
+    props.errorText && props.errorText !== '' ? props.errorText : 'Error';
 
-  const type = props.type ? props.type : "button";
+  const type = props.type ? props.type : 'button';
 
   const className = `reactive-btn${
-    props.className ? " " + props.className : ""
+    props.className ? ' ' + props.className : ''
   }`;
 
   const outline = props.outline ? true : false;
@@ -87,30 +88,30 @@ const ReactiveButton = (props) => {
 
   const rounded = props.rounded ? true : false;
 
-  const size = props.size ? props.size : "normal";
+  const size = props.size ? props.size : 'normal';
 
   const animation =
-    typeof props.animation !== "undefined" && props.animation === false
+    typeof props.animation !== 'undefined' && props.animation === false
       ? false
       : true;
 
   const [buttonState, setButtonState] = useState(
-    props.buttonState ? props.buttonState : "idle"
+    props.buttonState ? props.buttonState : 'idle'
   );
 
   const onClickHandler = () => {
-    if (typeof props.onClick !== "undefined") {
+    if (typeof props.onClick !== 'undefined') {
       props.onClick();
     }
   };
 
   useEffect(() => {
-    if (typeof props.buttonState !== "undefined") {
+    if (typeof props.buttonState !== 'undefined') {
       setButtonState(props.buttonState);
-      if (props.buttonState === "success" || props.buttonState === "error") {
+      if (props.buttonState === 'success' || props.buttonState === 'error') {
         setTimeout(
           () => {
-            setButtonState("idle");
+            setButtonState('idle');
           },
           props.messageDuration ? props.messageDuration : 2000
         );
@@ -119,26 +120,26 @@ const ReactiveButton = (props) => {
   }, [props.buttonState, props.messageDuration]);
 
   const getButtonText = (currentButtonState) => {
-    if (currentButtonState === "idle") {
+    if (currentButtonState === 'idle') {
       return idleText;
-    } else if (currentButtonState === "loading") {
-      return loadingText === "Loading" ? (
+    } else if (currentButtonState === 'loading') {
+      return loadingText === 'Loading' ? (
         <React.Fragment>
           {loadingIcon} {loadingText}
         </React.Fragment>
       ) : (
         loadingText
       );
-    } else if (currentButtonState === "success") {
-      return successText === "Success" ? (
+    } else if (currentButtonState === 'success') {
+      return successText === 'Success' ? (
         <React.Fragment>
           {successIcon} {successText}
         </React.Fragment>
       ) : (
         successText
       );
-    } else if (currentButtonState === "error") {
-      return errorText === "Error" ? (
+    } else if (currentButtonState === 'error') {
+      return errorText === 'Error' ? (
         <React.Fragment>
           {errorIcon} {errorText}
         </React.Fragment>
@@ -151,18 +152,18 @@ const ReactiveButton = (props) => {
   return (
     <React.Fragment>
       <span
-        className={`reactive-btn-wrapper ${size}${props.block ? " block" : ""}`}
+        className={`reactive-btn-wrapper ${size}${props.block ? ' block' : ''}`}
         style={{ width: props.width, height: props.height }}
       >
         <button
-          ref={typeof props.buttonRef !== "undefined" ? props.buttonRef : null}
-          disabled={buttonState !== "idle" || props.disabled}
+          ref={typeof props.buttonRef !== 'undefined' ? props.buttonRef : null}
+          disabled={buttonState !== 'idle' || props.disabled}
           data-button-state={buttonState}
           type={type}
-          className={`${className} ${color}${outline ? " outline" : ""}${
-            !animation ? " no-animation" : ""
-          }${rounded ? " rounded" : ""}${shadow ? " shadow" : ""}${
-            props.disabled ? " disabled" : ""
+          className={`${className} ${color}${outline ? ' outline' : ''}${
+            !animation ? ' no-animation' : ''
+          }${rounded ? ' rounded' : ''}${shadow ? ' shadow' : ''}${
+            props.disabled ? ' disabled' : ''
           }`}
           onClick={onClickHandler}
           style={style}
@@ -175,6 +176,33 @@ const ReactiveButton = (props) => {
       </span>
     </React.Fragment>
   );
+};
+
+ReactiveButton.propTypes = {
+  color: PropTypes.string,
+  idleText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  loadingText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  successText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  errorText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  type: PropTypes.string,
+  className: PropTypes.string,
+  outline: PropTypes.bool,
+  shadow: PropTypes.bool,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  rounded: PropTypes.bool,
+  size: PropTypes.string,
+  animation: PropTypes.bool,
+  buttonState: PropTypes.string,
+  onClick: PropTypes.func,
+  messageDuration: PropTypes.number,
+  block: PropTypes.bool,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  buttonRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any }),
+  ]),
+  disabled: PropTypes.bool,
 };
 
 export default ReactiveButton;
