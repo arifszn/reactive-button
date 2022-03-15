@@ -155,13 +155,13 @@
   transition: transform 0.2s ease;
 }
 
-.reactive-btn:not([data-button-state="idle"]) .progress {
+.reactive-btn:not([data-button-state='idle']) .progress {
   transform: translateX(0%);
   transition: transform 3s cubic-bezier(0.59, 0.01, 0.41, 0.99);
 }
 
 .reactive-btn .drbll1:after {
-  content: ".";
+  content: '.';
   animation: dots 1s steps(5, end) infinite;
 }
 
