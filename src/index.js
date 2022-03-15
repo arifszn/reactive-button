@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './css/index.css';
+import PropTypes from 'prop-types';
 
 const loadingIcon = (
   <svg
@@ -175,6 +176,33 @@ const ReactiveButton = (props) => {
       </span>
     </React.Fragment>
   );
+};
+
+ReactiveButton.propTypes = {
+  color: PropTypes.string,
+  idleText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  loadingText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  successText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  errorText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  type: PropTypes.string,
+  className: PropTypes.string,
+  outline: PropTypes.bool,
+  shadow: PropTypes.bool,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  rounded: PropTypes.bool,
+  size: PropTypes.string,
+  animation: PropTypes.bool,
+  buttonState: PropTypes.string,
+  onClick: PropTypes.func,
+  messageDuration: PropTypes.number,
+  block: PropTypes.bool,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  buttonRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any }),
+  ]),
+  disabled: PropTypes.bool,
 };
 
 export default ReactiveButton;
