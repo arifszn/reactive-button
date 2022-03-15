@@ -15,7 +15,7 @@ with a fix.
 ## Submitting a Pull Request
 
 - If applicable, update the `readme`
-- Use prettier before committing
+- Use `npm run lint` and `npm run prettier` before committing
 - Example for a commit message
 
   ```
