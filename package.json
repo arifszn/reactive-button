@@ -9,7 +9,10 @@
   "typings": "./types/index.d.ts",
   "scripts": {
     "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exi5 1"
+    "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .js,.jsx --ignore-path .gitignore --fix .",
+    "prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --ignore-path .gitignore --config ./.prettierrc",
+    "prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --ignore-path .gitignore --config ./.prettierrc"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
