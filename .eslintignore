@@ -21,3 +21,26 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 stats.html
+
+# website
+
+# Dependencies
+/website/node_modules
+
+# Production
+/website/build
+
+# Generated files
+/website/.docusaurus
+/website/.cache-loader
+
+# Misc
+/website/.DS_Store
+/website/.env.local
+/website/.env.development.local
+/website/.env.test.local
+/website/.env.production.local
+
+/website/npm-debug.log*
+/website/yarn-debug.log*
+/website/yarn-error.log*
