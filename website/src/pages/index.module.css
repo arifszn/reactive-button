@@ -1,0 +1,134 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureImage {
+  height: 200px;
+  width: 200px;
+  padding-bottom: 20px;
+}
+
+html[data-theme='dark'] .features {
+  background-color: #33363b;
+}
+
+.exampleComponent {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+html[data-theme='dark'] .exampleComponent {
+  background-color: #18191a;
+}
+
+.exampleComponent__container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--ifm-spacing-horizontal);
+  padding-right: var(--ifm-spacing-horizontal);
+  width: 100%;
+}
+
+.exampleComponent__item {
+  padding: 50px 100px;
+}
+
+@media screen and (max-width: 966px) {
+  .exampleComponent__item {
+    padding: unset;
+  }
+}
+
+.logo {
+  animation-duration: 2s;
+  animation-name: jackInTheBox;
+  width: 80px;
+}
+
+.heroProjectKeywords {
+  color: var(--ifm-color-primary);
+}
+
+.heroProjectKeywordsSecondary {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.root {
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+/* animations */
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
