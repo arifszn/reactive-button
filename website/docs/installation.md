@@ -5,7 +5,7 @@ title: Installation
 
 ## Requirements
 
-- _React version_ >= `16.8 or above`
+- React version >= `16.8 or above`
 
 ## Installation
 
