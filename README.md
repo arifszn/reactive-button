@@ -155,7 +155,7 @@ For complete usage, visit the <a href="https://arifszn.github.io/reactive-button
 |     height      |   `string` \| `null`    |                                                      Override button height                                                       |    `null`    |
 |    animation    |        `boolean`        |                                                 Button hover and click animation                                                  |    `true`    |
 
-## 💖 Support
+## Support
 
 <p>You can show your support by starring this project.</p>
 <a href="https://github.com/arifszn/reactive-button/stargazers">
