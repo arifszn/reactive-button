@@ -49,7 +49,6 @@
   </p>
 </p>
 
-
 <p align="center">
   <a href="https://arifszn.github.io/reactive-button" target="_blank">
     <img src="https://arifszn.github.io/reactive-button/img/preview.gif" alt="Reactive Button Preview" title="Reactive Button Preview">
@@ -93,9 +92,10 @@ yarn add reactive-button
 ## Usage
 
 The targets of this example:
-- Show a button showing the text '*Submit*'.
-- After clicking the button, change the button text to '*Submitting*' and send an HTTP request.
-- Upon successful request, change the button text to '*Done*' as success notification.
+
+- Show a button showing the text '_Submit_'.
+- After clicking the button, change the button text to '_Submitting_' and send an HTTP request.
+- Upon successful request, change the button text to '_Done_' as success notification.
 
 ```js
 import { useState } from 'react';
@@ -125,11 +125,9 @@ function App() {
 }
 
 export default App;
-
 ```
 
 For complete usage, visit the <a href="https://arifszn.github.io/reactive-button/docs/usage">docs</a>.
-
 
 ## Available Props
 
@@ -167,7 +165,6 @@ For complete usage, visit the <a href="https://arifszn.github.io/reactive-button
 ## Contribute
 
 To contribute, see the [contributing guide](https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md).
-
 
 ## License
 
