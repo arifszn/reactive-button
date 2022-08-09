@@ -1,0 +1,690 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #5867dd;
+  --ifm-color-primary-dark: #3e50d8;
+  --ifm-color-primary-darker: #3144d5;
+  --ifm-color-primary-darkest: #2535b4;
+  --ifm-color-primary-light: #727ee2;
+  --ifm-color-primary-lighter: #7f8ae5;
+  --ifm-color-primary-lightest: #a5aded;
+  --ifm-code-font-size: 95%;
+  --ifm-navbar-item-padding-horizontal: 16px;
+}
+
+::-webkit-scrollbar-track {
+  /* border-radius: 0px; */
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  scrollbar-width: thin;
+  /* scrollbar-color: darkgrey #F5F5F5; */
+}
+
+@media screen and (min-width: 966px) {
+  ::-webkit-scrollbar,
+  .scroller {
+    width: 8px;
+    height: 8px;
+    background-color: #f1f1f1;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  /* border-radius: 0px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.navbar__title {
+  color: var(--ifm-color-primary);
+}
+
+.header-github-link:before {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+  content: '';
+  display: flex;
+  height: 24px;
+  width: 24px;
+}
+
+html[data-theme='dark'] .header-github-link:before {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+.z-styled-preview {
+  background-color: #e3eaea;
+}
+
+html[data-theme='dark'] .z-styled-preview {
+  background-color: #232525;
+}
+
+.header-github-link:hover {
+  opacity: 0.6;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.flex-section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* ----------- z-table starts ----------- */
+.z-table-wrapper {
+  border: 1px solid #e0e0e0;
+}
+
+.z-table-wrapper table {
+  width: 100%;
+  color: #8a8f94;
+  margin-bottom: 0;
+  border-collapse: unset;
+}
+
+.z-table-wrapper table tr {
+  background: var(--ifm-table-background);
+  line-height: 30px;
+}
+
+.z-table-wrapper table th {
+  background-color: #e2e4e4;
+  color: #adacac;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+html[data-theme='dark'] .z-table-wrapper table th {
+  background-color: #1d1f1f;
+}
+
+.z-table-wrapper table th:nth-child(3) {
+  width: 20px;
+}
+
+.z-table-wrapper table td:first-child {
+  font-weight: 600;
+  color: #777;
+}
+
+.z-table-wrapper table td:nth-child(2) {
+  color: cadetblue;
+}
+
+.z-table-wrapper table tr:nth-child(2n) {
+  background-color: var(--ifm-table-stripe-background);
+}
+
+.z-table-wrapper table td,
+.z-table-wrapper table th {
+  border: none;
+  font-size: 13px;
+  white-space: nowrap !important;
+}
+
+/* ----------- z-table ends ----------- */
+
+/* bootstrap custom starts */
+
+.border {
+  border: 1px solid #dee2e6 !important;
+}
+
+.w-25 {
+  width: 25% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-75 {
+  width: 75% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-auto {
+  width: auto !important;
+}
+
+.h-25 {
+  height: 25% !important;
+}
+
+.h-50 {
+  height: 50% !important;
+}
+
+.h-75 {
+  height: 75% !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.h-auto {
+  height: auto !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.justify-content-center {
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.m-auto {
+  margin: auto !important;
+}
+
+.mt-auto,
+.my-auto {
+  margin-top: auto !important;
+}
+
+.mr-auto,
+.mx-auto {
+  margin-right: auto !important;
+}
+
+.mb-auto,
+.my-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto,
+.mx-auto {
+  margin-left: auto !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mt-0,
+.my-0 {
+  margin-top: 0 !important;
+}
+
+.mr-0,
+.mx-0 {
+  margin-right: 0 !important;
+}
+
+.mb-0,
+.my-0 {
+  margin-bottom: 0 !important;
+}
+
+.ml-0,
+.mx-0 {
+  margin-left: 0 !important;
+}
+
+.m-1 {
+  margin: 0.25rem !important;
+}
+
+.mt-1,
+.my-1 {
+  margin-top: 0.25rem !important;
+}
+
+.mr-1,
+.mx-1 {
+  margin-right: 0.25rem !important;
+}
+
+.mb-1,
+.my-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.ml-1,
+.mx-1 {
+  margin-left: 0.25rem !important;
+}
+
+.m-2 {
+  margin: 0.5rem !important;
+}
+
+.mt-2,
+.my-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mr-2,
+.mx-2 {
+  margin-right: 0.5rem !important;
+}
+
+.mb-2,
+.my-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.ml-2,
+.mx-2 {
+  margin-left: 0.5rem !important;
+}
+
+.m-3 {
+  margin: 1rem !important;
+}
+
+.mt-3,
+.my-3 {
+  margin-top: 1rem !important;
+}
+
+.mr-3,
+.mx-3 {
+  margin-right: 1rem !important;
+}
+
+.mb-3,
+.my-3 {
+  margin-bottom: 1rem !important;
+}
+
+.ml-3,
+.mx-3 {
+  margin-left: 1rem !important;
+}
+
+.m-4 {
+  margin: 1.5rem !important;
+}
+
+.mt-4,
+.my-4 {
+  margin-top: 1.5rem !important;
+}
+
+.mr-4,
+.mx-4 {
+  margin-right: 1.5rem !important;
+}
+
+.mb-4,
+.my-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.ml-4,
+.mx-4 {
+  margin-left: 1.5rem !important;
+}
+
+.m-5 {
+  margin: 3rem !important;
+}
+
+.mt-5,
+.my-5 {
+  margin-top: 3rem !important;
+}
+
+.mr-5,
+.mx-5 {
+  margin-right: 3rem !important;
+}
+
+.mb-5,
+.my-5 {
+  margin-bottom: 3rem !important;
+}
+
+.ml-5,
+.mx-5 {
+  margin-left: 3rem !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.pt-0,
+.py-0 {
+  padding-top: 0 !important;
+}
+
+.pr-0,
+.px-0 {
+  padding-right: 0 !important;
+}
+
+.pb-0,
+.py-0 {
+  padding-bottom: 0 !important;
+}
+
+.pl-0,
+.px-0 {
+  padding-left: 0 !important;
+}
+
+.p-1 {
+  padding: 0.25rem !important;
+}
+
+.pt-1,
+.py-1 {
+  padding-top: 0.25rem !important;
+}
+
+.pr-1,
+.px-1 {
+  padding-right: 0.25rem !important;
+}
+
+.pb-1,
+.py-1 {
+  padding-bottom: 0.25rem !important;
+}
+
+.pl-1,
+.px-1 {
+  padding-left: 0.25rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.pt-2,
+.py-2 {
+  padding-top: 0.5rem !important;
+}
+
+.pr-2,
+.px-2 {
+  padding-right: 0.5rem !important;
+}
+
+.pb-2,
+.py-2 {
+  padding-bottom: 0.5rem !important;
+}
+
+.pl-2,
+.px-2 {
+  padding-left: 0.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.pt-3,
+.py-3 {
+  padding-top: 1rem !important;
+}
+
+.pr-3,
+.px-3 {
+  padding-right: 1rem !important;
+}
+
+.pb-3,
+.py-3 {
+  padding-bottom: 1rem !important;
+}
+
+.pl-3,
+.px-3 {
+  padding-left: 1rem !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+.pt-4,
+.py-4 {
+  padding-top: 1.5rem !important;
+}
+
+.pr-4,
+.px-4 {
+  padding-right: 1.5rem !important;
+}
+
+.pb-4,
+.py-4 {
+  padding-bottom: 1.5rem !important;
+}
+
+.pl-4,
+.px-4 {
+  padding-left: 1.5rem !important;
+}
+
+.p-5 {
+  padding: 3rem !important;
+}
+
+.pt-5,
+.py-5 {
+  padding-top: 3rem !important;
+}
+
+.pr-5,
+.px-5 {
+  padding-right: 3rem !important;
+}
+
+.pb-5,
+.py-5 {
+  padding-bottom: 3rem !important;
+}
+
+.pl-5,
+.px-5 {
+  padding-left: 3rem !important;
+}
+
+/* bootstrap custom ends */
+
+/* **************************** z-switch starts **************************** */
+
+.z-switch {
+  --z-switch-ball-bg: var(--ifm-color-primary);
+  --z-switch-checked-bg: var(--ifm-color-primary);
+  --z-switch-border-color: var(--ifm-color-primary);
+  --z-switch-hover-border-color: transparent;
+  --z-switch-disabled-checked-bg: transparent;
+  --z-switch-width: 41px;
+  --z-switch-height: 21px;
+  --z-switch-bg: var(--ifm-background-color);
+  --z-switch-radius: 12px;
+  --z-switch-ball-width: 15px;
+  --z-switch-ball-bg: #d7d7f4;
+  --z-switch-checked-ball-bg: white;
+  --z-switch-border-color: #d7d7f4;
+  --z-switch-hover-border-color: #d7d7f4;
+  --z-switch-checked-bg: var(--ifm-color-primary);
+  --z-switch-disabled-bg: var(--ifm-color-primary-light);
+  --z-switch-disabled-checked-bg: var(--ifm-color-primary-dark);
+  position: relative;
+  width: var(--z-switch-width);
+  height: var(--z-switch-height);
+  background: var(--z-switch-bg);
+  border: 1px solid var(--z-switch-border-color);
+  border-radius: var(--z-switch-radius);
+  cursor: pointer;
+  transition: 0.3s;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.z-switch:focus {
+  outline: none;
+}
+
+.z-switch:checked {
+  --z-switch-border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+}
+
+.z-switch:checked::before {
+  --z-switch-ball-bg: var(--z-switch-checked-ball-bg);
+  transform: translateX(20px);
+}
+
+.z-switch::before {
+  position: absolute;
+  content: '';
+  top: 2px;
+  left: 2px;
+  width: var(--z-switch-ball-width);
+  height: var(--z-switch-ball-width);
+  background: var(--z-switch-ball-bg);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.z-switch:disabled {
+  --z-switch-bg: var(--z-switch-disabled-bg);
+  --z-switch-checked-bg: var(--z-switch-disabled-checked-bg);
+}
+
+.z-switch:disabled:checked {
+  --z-switch-border-color: #d7d7f4;
+  background: #d7d7f4;
+}
+/* **************************** z-switch ends **************************** */
+.z-center {
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  display: flex;
+}
+
+.vertical-align {
+  vertical-align: middle;
+}
+
+.keyword {
+  color: var(--ifm-color-primary);
+}
+
+.reactive-button-badges a,
+.reactive-button-badges img {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.shadow-dim {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+svg.react-icon {
+  vertical-align: middle;
+}
+
+.footer__logo {
+  max-width: 80px;
+}
+
+.fadeIn {
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.icon-spin {
+  -webkit-animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}

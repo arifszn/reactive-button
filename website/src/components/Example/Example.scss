@@ -1,0 +1,13 @@
+.example-component-wrapper {
+  .reactive-btn-wrapper,
+  .reactive-btn {
+    --reactive-button-font-size: 13px !important;
+  }
+  .flex-section {
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+  .flex-section .item {
+    padding: 10px;
+  }
+}

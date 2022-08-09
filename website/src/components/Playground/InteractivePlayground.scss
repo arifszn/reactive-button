@@ -1,0 +1,14 @@
+.interactive-playground-component-wrapper {
+  .playground__card {
+    min-height: 120px;
+  }
+
+  .props__container .flex-section {
+    justify-content: left;
+  }
+
+  .form-control,
+  .input-group-text {
+    font-size: inherit !important;
+  }
+}
