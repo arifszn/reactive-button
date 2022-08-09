@@ -1,32 +1,54 @@
-<p align="center">
-  <a href="https://arifszn.github.io/reactive-button" target="_blank">
-    <img 
-      src="https://arifszn.github.io/reactive-button/img/logo/logo.png"
-      alt="Reactive Button"
-      title="Reactive Button"
-      width="80"
-    />
-  </a>
-</p>
-
-<h1 align="center">Reactive Button</h1>
-<p align="center">3D animated react button component with progress bar.</p>
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/reactive-button">
-    <img src="https://img.shields.io/npm/v/reactive-button"/>
-  </a>
-  <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
-  <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg"/>
-  <a href="https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
-  </a>
-  <a href="https://github.com/arifszn/reactive-button/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/arifszn/reactive-button"/>
-  </a>
-</p>
-
 <br/>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/45073703/183357205-60175f37-abcb-4027-bdfa-8762322f342b.png" width="35%">
+
+  <h4 align="center">3D animated react button component with progress bar.</h4>
+
+  <p align="center">
+    <a href="https://www.npmjs.com/package/reactive-button">
+      <img src="https://img.shields.io/npm/v/reactive-button"/>
+    </a>
+    <a href="https://www.npmjs.com/package/reactive-button">
+      <img src="https://img.shields.io/npm/dt/reactive-button"/>
+    </a>
+    <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
+    <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg"/>
+    <a href="https://codeclimate.com/github/arifszn/reactive-button/maintainability">
+      <img src="https://api.codeclimate.com/v1/badges/c60f42d7d0b61bd33e98/maintainability" />
+    </a>
+    <a href="https://github.com/arifszn/reactive-button/issues">
+      <img src="https://img.shields.io/github/issues/arifszn/reactive-button"/>
+    </a>
+    <a href="https://github.com/arifszn/reactive-button/stargazers">
+      <img src="https://img.shields.io/github/stars/arifszn/reactive-button"/>
+    </a>
+    <a href="https://github.com/arifszn/reactive-button/blob/main/package-lock.json">
+      <img src="https://img.shields.io/snyk/vulnerabilities/github/arifszn/reactive-button"/>
+    </a>
+    <a href="https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md">
+      <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
+    </a>
+    <a href="https://github.com/arifszn/reactive-button/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/arifszn/reactive-button"/>
+    </a>
+    <a href="https://www.buymeacoffee.com/arifszn">
+      <img src="https://img.shields.io/badge/sponsor-buy%20me%20a%20coffee-yellow?logo=buymeacoffee"/>
+    </a>
+    <a href="https://twitter.com/intent/tweet?text=3D%20animated%20react%20button%20component%20with%20progress%20bar.&url=https://github.com/arifszn/reactive-button&hashtags=javascript,reactjs,opensource,js,webdev,developers">
+      <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Farifszn%2Freactive-button"/>
+    </a>
+  </p>
+
+  <p align="center">
+    <a href="https://arifszn.github.io/reactive-button">Documentation</a>
+    ·
+    <a href="https://github.com/arifszn/reactive-button/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/arifszn/reactive-button/discussions">Request Feature</a>
+  </p>
+</p>
+
 
 <p align="center">
   <a href="https://arifszn.github.io/reactive-button" target="_blank">
@@ -50,38 +72,30 @@
 
 ## Resources
 
-- [Demo](https://arifszn.github.io/reactive-button)
 - [Documentation](https://arifszn.github.io/reactive-button/docs)
 - [Playground](https://arifszn.github.io/reactive-button/docs/playground)
 - [CodeSandbox](https://codesandbox.io/s/reactive-button-lvpeb)
 
 ## Installation
 
-Install via <a href="https://www.npmjs.com/package/reactive-button">NPM</a>
+Install via <a href="https://www.npmjs.com/package/reactive-button">NPM</a>.
 
-```
+```sh
 npm install reactive-button
 ```
 
-Install via <a href="https://yarnpkg.com/package/reactive-button">Yarn</a>
+Or via <a href="https://yarnpkg.com/package/reactive-button">Yarn</a>.
 
-```
+```sh
 yarn add reactive-button
 ```
 
 ## Usage
 
-For complete usage, visit the <a href="https://arifszn.github.io/reactive-button/docs/usage">docs</a>.
-
-> The below example demonstrates an asynchronous task. When clicking the button, an asynchronous task (e.g. Data fetch, form submit) will be processed and after processing, a success or error message will be displayed.
-
-- Initialize a state with string value `'idle'` and assign it as <strong>'buttonState'</strong> prop. Now it will render an idle text.
-- When the button is clicked, set <strong>'buttonState'</strong>'s value to `'loading'`.
-- When the task is completed, set <strong>'buttonState'</strong> to `'success'`, `'error'` or `'idle'` according to your need.
-
-<br/>
-    
-### Basic Usage
+The targets of this example:
+- Show a button showing the text '*Submit*'.
+- After clicking the button, change the button text to '*Submitting*' and send an HTTP request.
+- Upon successful request, change the button text to '*Done*' as success notification.
 
 ```js
 import { useState } from 'react';
@@ -92,28 +106,8 @@ function App() {
 
   const onClickHandler = () => {
     setState('loading');
-    setTimeout(() => {
-      setState('success');
-    }, 2000);
-  };
 
-  return <ReactiveButton buttonState={state} onClick={onClickHandler} />;
-}
-
-export default App;
-```
-
-### Full Usage
-
-```js
-import { useState } from 'react';
-import ReactiveButton from 'reactive-button';
-
-function App() {
-  const [state, setState] = useState('idle');
-
-  const onClickHandler = () => {
-    setState('loading');
+    // send an HTTP request
     setTimeout(() => {
       setState('success');
     }, 2000);
@@ -122,32 +116,20 @@ function App() {
   return (
     <ReactiveButton
       buttonState={state}
+      idleText="Submit"
+      loadingText="Submitting"
+      successText="Done"
       onClick={onClickHandler}
-      color={'primary'}
-      idleText={'Button'}
-      loadingText={'Loading'}
-      successText={'Success'}
-      errorText={'Error'}
-      type={'button'}
-      className={'class1 class2'}
-      style={{ borderRadius: '5px' }}
-      outline={false}
-      shadow={false}
-      rounded={false}
-      size={'normal'}
-      block={false}
-      messageDuration={2000}
-      disabled={false}
-      buttonRef={null}
-      width={null}
-      height={null}
-      animation={true}
     />
   );
 }
 
 export default App;
+
 ```
+
+For complete usage, visit the <a href="https://arifszn.github.io/reactive-button/docs/usage">docs</a>.
+
 
 ## Available Props
 
@@ -175,16 +157,18 @@ export default App;
 |     height      |   `string` \| `null`    |                                                      Override button height                                                       |    `null`    |
 |    animation    |        `boolean`        |                                                 Button hover and click animation                                                  |    `true`    |
 
+## 💖 Support
+
+<p>You can show your support by starring this project.</p>
+<a href="https://github.com/arifszn/reactive-button/stargazers">
+  <img src="https://img.shields.io/github/stars/arifszn/reactive-button?style=social" alt="Github Star">
+</a>
+
 ## Contribute
 
-To contribute, see the [Contributing guide](https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md).
+To contribute, see the [contributing guide](https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md).
 
-## Support
-
-<a href="https://www.buymeacoffee.com/arifszn" target="_blank">
-  <img src="https://raw.githubusercontent.com/arifszn/arifszn/main/assets/bmc-button.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
-</a>
 
 ## License
 
-**Reactive Button** is licensed under the [MIT License](https://github.com/arifszn/reactive-button/blob/main/LICENSE).
+[MIT License](https://github.com/arifszn/reactive-button/blob/main/LICENSE)
