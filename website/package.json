@@ -15,7 +15,7 @@
   "dependencies": {
     "@docusaurus/core": "^2.0.1",
     "@docusaurus/preset-classic": "^2.0.1",
-    "@easyops-cn/docusaurus-search-local": "^0.19.1",
+    "@easyops-cn/docusaurus-search-local": "^0.31.0",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "@mdx-js/react": "^1.6.21",
