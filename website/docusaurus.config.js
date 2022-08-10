@@ -93,14 +93,27 @@ module.exports = {
       },
     ],
   ],
-  plugins: [require.resolve('docusaurus-plugin-sass')],
+  plugins: [
+    require.resolve('docusaurus-plugin-sass'),
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/docs',
+            to: '/docs/introduction',
+          },
+        ],
+      },
+    ],
+  ],
   themes: [
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
-        indexDocs: true,
-        indexPages: true,
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
       },
     ],
   ],

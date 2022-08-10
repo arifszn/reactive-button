@@ -71,7 +71,7 @@
 
 ## Resources
 
-- [Documentation](https://arifszn.github.io/reactive-button/docs)
+- [Documentation](https://arifszn.github.io/reactive-button)
 - [Playground](https://arifszn.github.io/reactive-button/docs/playground)
 - [CodeSandbox](https://codesandbox.io/s/reactive-button-lvpeb)
 
