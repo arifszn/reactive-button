@@ -27,19 +27,17 @@ import Example from '../src/components/Example/Example';
 - Super easy to customize
 - And much more !
 
-## Contribute
-
-To contribute, see the [Contributing guide](https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md).
-
 ## Support
 
-<a href="https://www.buymeacoffee.com/arifszn" target="_blank">
-  <img src="https://raw.githubusercontent.com/arifszn/arifszn/main/assets/bmc-button.png" alt="Buy Me A Coffee" style={{
-      height: '60px',
-      width: '217px',
-  }}/>
+<p>You can show your support by starring this project.</p>
+<a href="https://github.com/arifszn/reactive-button/stargazers">
+  <img src="https://img.shields.io/github/stars/arifszn/reactive-button?style=social" alt="Github Star"/>
 </a>
+
+## Contribute
+
+To contribute, see the [contributing guide](https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md).
 
 ## License
 
-**Reactive Button** is licensed under the [MIT License](https://github.com/arifszn/reactive-button/blob/main/LICENSE).
+[MIT License](https://github.com/arifszn/reactive-button/blob/main/LICENSE)
