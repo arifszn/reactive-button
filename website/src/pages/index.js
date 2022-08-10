@@ -99,7 +99,6 @@ function Home() {
   const { description } = customFields;
 
   const [showGetStartedButton, setShowGetStartedButton] = useState(false);
-  const [buttonState, setButtonState] = useState('idle');
   const docLink = useBaseUrl('docs/introduction');
   const history = useHistory();
 
@@ -108,10 +107,7 @@ function Home() {
   }, []);
 
   const buttonOnClickHandler = () => {
-    setButtonState('loading');
-    setTimeout(() => {
-      history.push(docLink);
-    }, 500);
+    history.push(docLink);
   };
 
   return (
@@ -138,18 +134,11 @@ function Home() {
               <ReactiveButton
                 style={{ display: showGetStartedButton ? 'block' : 'none' }}
                 size={'large'}
-                buttonState={buttonState}
                 onClick={buttonOnClickHandler}
                 idleText={
                   <span>
                     Get Started &nbsp;
                     <FaArrowRight className="react-icon" />
-                  </span>
-                }
-                loadingText={
-                  <span>
-                    Redirecting &nbsp;
-                    <ImSpinner8 className="icon-spin react-icon" />
                   </span>
                 }
                 width={'170px'}
