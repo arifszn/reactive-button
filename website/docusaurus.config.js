@@ -99,6 +99,8 @@ module.exports = {
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
+        indexDocs: true,
+        indexPages: true,
       },
     ],
   ],
