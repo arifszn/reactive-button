@@ -66,16 +66,20 @@ Reactive Button comes with 10 default color options.
 </div>
 
 ```jsx
-<ReactiveButton color="primary"/>
-<ReactiveButton color="secondary"/>
-<ReactiveButton color="teal"/>
-<ReactiveButton color="green"/>
-<ReactiveButton color="red"/>
-<ReactiveButton color="violet"/>
-<ReactiveButton color="blue"/>
-<ReactiveButton color="yellow"/>
-<ReactiveButton color="dark"/>
-<ReactiveButton color="light"/>
+return (
+  <>
+    <ReactiveButton color="primary" />
+    <ReactiveButton color="secondary" />
+    <ReactiveButton color="teal" />
+    <ReactiveButton color="green" />
+    <ReactiveButton color="red" />
+    <ReactiveButton color="violet" />
+    <ReactiveButton color="blue" />
+    <ReactiveButton color="yellow" />
+    <ReactiveButton color="dark" />
+    <ReactiveButton color="light" />
+  </>
+);
 ```
 
 ### Size
@@ -91,10 +95,14 @@ There are 4 sizes available.
 </div>
 
 ```jsx
-<ReactiveButton size="tiny"/>
-<ReactiveButton size="small"/>
-<ReactiveButton size="medium"/>
-<ReactiveButton size="large"/>
+return (
+  <>
+    <ReactiveButton size="tiny" />
+    <ReactiveButton size="small" />
+    <ReactiveButton size="medium" />
+    <ReactiveButton size="large" />
+  </>
+);
 ```
 
 ### Style
@@ -110,9 +118,13 @@ Make the buttons more beautiful with these customization options.
 </div>
 
 ```jsx
-<ReactiveButton outline/>
-<ReactiveButton rounded/>
-<ReactiveButton shadow/>
+return (
+  <>
+    <ReactiveButton outline />
+    <ReactiveButton rounded />
+    <ReactiveButton shadow />
+  </>
+);
 ```
 
 ### Existing State
@@ -136,7 +148,7 @@ return (
 You are not limited to use state always.
 
 ```jsx
-<ReactiveButton onClick={doSomething} idleText={'Some Text'} />
+return <ReactiveButton onClick={doSomething} idleText={'Some Text'} />;
 ```
 
 ### Using Icons
@@ -152,13 +164,15 @@ You can use your own icons. Don't forget to wrap them with a parent element.
 </div>
 
 ```jsx
-<ReactiveButton
-  idleText={
-    <span>
-      <faReply /> Send
-    </span>
-  }
-/>
+return (
+  <ReactiveButton
+    idleText={
+      <span>
+        <faReply /> Send
+      </span>
+    }
+  />
+);
 ```
 
 ### Form Submit
@@ -166,11 +180,13 @@ You can use your own icons. Don't forget to wrap them with a parent element.
 If you need to submit form by button clicking, set the <code>type</code> prop as '<strong>submit</strong>'.
 
 ```jsx
-<form>
-  <input type="text" name="username" />
-  <input type="password" name="password" />
-  <ReactiveButton type={'submit'} idleText="Submit" />
-</form>
+return (
+  <form>
+    <input type="text" name="username" />
+    <input type="password" name="password" />
+    <ReactiveButton type={'submit'} idleText="Submit" />
+  </form>
+);
 ```
 
 ### Anchor Tag
@@ -186,9 +202,11 @@ To use Reactive button as anchor tag, simply wrap it with an anchor tag.
 </div>
 
 ```jsx
-<a href="https://github.com/" target="_blank">
-  <ReactiveButton idleText="Visit Github" />
-</a>
+return (
+  <a href="https://github.com/" target="_blank">
+    <ReactiveButton idleText="Visit Github" />
+  </a>
+);
 ```
 
 import Link from '@docusaurus/Link';

@@ -15,57 +15,56 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const EditorPlayground = () => {
   const code = `
-    function App() {
-      const [state, setState] = useState('idle');
+function App() {
+  const [state, setState] = useState('idle');
 
-      const onClickHandler = () => {
-        setState('loading');
-        setTimeout(() => {
-          setState('success');
-        }, 2000);
-      };
+  const onClickHandler = () => {
+    setState('loading');
+    setTimeout(() => {
+      setState('success');
+    }, 2000);
+  };
 
-      return (
-        <ReactiveButton
-          buttonState={state}
-          onClick={onClickHandler}
-          color={'primary'}
-          idleText={'Click Me'}
-          loadingText={
-            <Fragment>
-              <FontAwesomeIcon icon={faCircleNotch} spin /> Loading
-            </Fragment>
-          }
-          successText={
-            <Fragment>
-              <FontAwesomeIcon icon={faThumbsUp} /> Success
-            </Fragment>
-          }
-          errorText={
-            <Fragment>
-              <FontAwesomeIcon icon={faBomb} /> Error
-            </Fragment>
-          }
-          type={'button'}
-          className={'class1 class2'}
-          style={{
-            borderRadius: '5px',
-          }}
-          outline={false}
-          shadow={false}
-          rounded={false}
-          size={'normal'}
-          block={false}
-          messageDuration={2000}
-          disabled={false}
-          buttonRef={null}
-          width={null}
-          height={null}
-          animation={true}
-        />
-      );
-    }
-
+  return (
+    <ReactiveButton
+      buttonState={state}
+      onClick={onClickHandler}
+      color={'primary'}
+      idleText={'Click Me'}
+      loadingText={
+        <>
+          <FontAwesomeIcon icon={faCircleNotch} spin /> Loading
+        </>
+      }
+      successText={
+        <>
+          <FontAwesomeIcon icon={faThumbsUp} /> Success
+        </>
+      }
+      errorText={
+        <>
+          <FontAwesomeIcon icon={faBomb} /> Error
+        </>
+      }
+      type={'button'}
+      className={'class1 class2'}
+      style={{
+        borderRadius: '5px',
+      }}
+      outline={false}
+      shadow={false}
+      rounded={false}
+      size={'normal'}
+      block={false}
+      messageDuration={2000}
+      disabled={false}
+      buttonRef={null}
+      width={null}
+      height={null}
+      animation={true}
+    />
+  );
+}
   `;
 
   return (
