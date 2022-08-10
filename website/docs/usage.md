@@ -13,17 +13,11 @@ import ReactiveButton from 'reactive-button'
 import { faReply } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-:::info
+The targets of the below example:
 
-The Below example demonstrates an asynchronous task. When clicking the button, an asynchronous task (e.g. Data fetch, form submit) will be processed and after processing, a success or error message will be displayed.
-
-:::
-
-- Initialize a state with string value <code>'idle'</code> and assign it as <strong>'buttonState'</strong> prop. Now it will render an idle text.
-- When the button is clicked, set <strong>'buttonState'</strong>'s value to <code>'loading'</code>.
-- When the task is completed, set <strong>'buttonState'</strong> to <code>'success'</code>, <code>'error'</code> or <code>'idle'</code> according to your need.
-
-## Basic Usage
+- Show a button showing the text '_Submit_'.
+- After clicking the button, change the button text to '_Submitting_' and send an HTTP request.
+- Upon successful request, change the button text to '_Done_' as success notification.
 
 ```jsx
 import { useState } from 'react';
@@ -34,28 +28,8 @@ function App() {
 
   const onClickHandler = () => {
     setState('loading');
-    setTimeout(() => {
-      setState('success');
-    }, 2000);
-  };
 
-  return <ReactiveButton buttonState={state} onClick={onClickHandler} />;
-}
-
-export default App;
-```
-
-## Full Usage
-
-```jsx
-import { useState } from 'react';
-import ReactiveButton from 'reactive-button';
-
-function App() {
-  const [state, setState] = useState('idle');
-
-  const onClickHandler = () => {
-    setState('loading');
+    // send an HTTP request
     setTimeout(() => {
       setState('success');
     }, 2000);
@@ -64,38 +38,16 @@ function App() {
   return (
     <ReactiveButton
       buttonState={state}
+      idleText="Submit"
+      loadingText="Submitting"
+      successText="Done"
       onClick={onClickHandler}
-      color={'primary'}
-      idleText={'Button'}
-      loadingText={'Loading'}
-      successText={'Success'}
-      errorText={'Error'}
-      type={'button'}
-      className={'class1 class2'}
-      style={{ borderRadius: '5px' }}
-      outline={false}
-      shadow={false}
-      rounded={false}
-      size={'normal'}
-      block={false}
-      messageDuration={2000}
-      disabled={false}
-      buttonRef={null}
-      width={null}
-      height={null}
-      animation={true}
     />
   );
 }
 
 export default App;
 ```
-
-:::note
-
-For non asynchronous task, state management is not needed. Use as like normal button.
-
-:::
 
 ## Other Usage
 

@@ -91,13 +91,13 @@ yarn add reactive-button
 
 ## Usage
 
-The targets of this example:
+The targets of the below example:
 
 - Show a button showing the text '_Submit_'.
 - After clicking the button, change the button text to '_Submitting_' and send an HTTP request.
 - Upon successful request, change the button text to '_Done_' as success notification.
 
-```js
+```jsx
 import { useState } from 'react';
 import ReactiveButton from 'reactive-button';
 
