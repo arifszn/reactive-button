@@ -2,7 +2,6 @@
 id: introduction
 title: Introduction
 sidebar_label: Introduction
-slug: /
 ---
 
 **Reactive Button** is a 3D animated react component to replace the traditional boring buttons. Change your button style without adding any UI framework. Comes with progress bar and the goal is to let the users visualize what is happening after a button click.

@@ -100,7 +100,7 @@ function Home() {
 
   const [showGetStartedButton, setShowGetStartedButton] = useState(false);
   const [buttonState, setButtonState] = useState('idle');
-  const docLink = useBaseUrl('docs/');
+  const docLink = useBaseUrl('docs/introduction');
   const history = useHistory();
 
   useEffect(() => {
