@@ -27,7 +27,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
-    "react-live": "2.2.3",
+    "react-live": "2.4.1",
     "reactive-button": "latest",
     "sass": "^1.37.5",
     "styled-components": "^5.3.0",
