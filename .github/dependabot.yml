@@ -9,3 +9,5 @@ updates:
     directory: '/website'
     schedule:
       interval: 'weekly'
+    ignore:
+      - dependency-name: '@mdx-js/react'
