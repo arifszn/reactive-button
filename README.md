@@ -199,10 +199,10 @@ return (
 
 #### Without State
 
-You are not limited to use state always.
+`state` is not mandatory.
 
 ```jsx
-return <ReactiveButton onClick={doSomething} idleText={'Some Text'} />;
+return <ReactiveButton onClick={onClickHandler} />;
 ```
 
 #### Using Icons
