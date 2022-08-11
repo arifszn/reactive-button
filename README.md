@@ -133,7 +133,7 @@ Reactive Button has all the functionalities of a normal button.
 
 #### Color
 
-Reactive Button comes with 10 default color options.
+It comes with 10 default color options.
 
 ```jsx
 return (
