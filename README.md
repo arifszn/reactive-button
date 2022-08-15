@@ -94,7 +94,7 @@ yarn add reactive-button
 The targets of the below example:
 
 - Show a button showing the text '_Submit_'.
-- After clicking the button, change the button text to '_Submitting_' and send an HTTP request.
+- After clicking the button, change the button text to '_Loading_' and send an HTTP request.
 - Upon successful request, change the button text to '_Done_' as success notification.
 
 ```jsx
@@ -117,7 +117,7 @@ function App() {
     <ReactiveButton
       buttonState={state}
       idleText="Submit"
-      loadingText="Submitting"
+      loadingText="Loading"
       successText="Done"
       onClick={onClickHandler}
     />
