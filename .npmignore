@@ -1,5 +1,6 @@
-src
-website
+/src
+/website
+/.github
 .babelrc
 .eslintignore
 .eslintrc.js
