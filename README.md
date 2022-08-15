@@ -73,7 +73,7 @@
 
 - [Documentation](https://arifszn.github.io/reactive-button)
 - [Playground](https://arifszn.github.io/reactive-button/docs/playground)
-- [CodeSandbox](https://codesandbox.io/s/reactive-button-lvpeb)
+- [StackBlitz](https://stackblitz.com/edit/reactive-button)
 
 ## Installation
 
