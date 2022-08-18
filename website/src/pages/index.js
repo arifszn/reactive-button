@@ -6,7 +6,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css';
 import ReactiveButton from 'reactive-button';
 import { FaArrowRight } from 'react-icons/fa';
-import { ImSpinner8 } from 'react-icons/im';
 import { useHistory } from '@docusaurus/router';
 import Playground from '../components/Playground/Playground';
 import PropTypes from 'prop-types';
