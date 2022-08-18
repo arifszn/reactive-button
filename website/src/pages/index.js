@@ -60,7 +60,7 @@ const features = [
     ),
   },
   {
-    title: 'Not a rocket science',
+    title: 'Simple',
     description: (
       <>
         You know button? Use it just like a button. It&apos;s super easy and
