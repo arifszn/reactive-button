@@ -1,4 +1,4 @@
-name: Deploy website to GitHub Pages
+name: Deploy docs to GitHub Pages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
     paths:
-      - website/**
+      - docs/**
 
     workflow_dispatch:
 
@@ -21,7 +21,7 @@ concurrency:
 
 defaults:
   run:
-    working-directory: ./website
+    working-directory: ./docs
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 16.x
           cache: 'npm'
-          cache-dependency-path: website/package-lock.json
+          cache-dependency-path: docs/package-lock.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v1
@@ -54,7 +54,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./website/build
+          path: ./docs/build
 
   deploy:
     environment:
