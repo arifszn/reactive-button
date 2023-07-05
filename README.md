@@ -23,8 +23,8 @@
     <a href="https://github.com/arifszn/reactive-button/stargazers">
       <img src="https://img.shields.io/github/stars/arifszn/reactive-button"/>
     </a>
-    <a href="https://github.com/arifszn/reactive-button/blob/main/package-lock.json">
-      <img src="https://img.shields.io/snyk/vulnerabilities/github/arifszn/reactive-button"/>
+    <a href="https://github.com/arifszn/reactive-button/commits/main">
+      <img src="https://img.shields.io/github/last-commit/arifszn/reactive-button/main"/>
     </a>
     <a href="https://github.com/arifszn/reactive-button/blob/main/CONTRIBUTING.md">
       <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
