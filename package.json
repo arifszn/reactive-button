@@ -24,7 +24,7 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@rollup/plugin-commonjs": "^25.0.2",
-    "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-image": "^3.0.2",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@types/react": "^18.0.17",
     "eslint": "^8.11.0",
