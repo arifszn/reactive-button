@@ -56,6 +56,19 @@ const errorIcon = (
   </svg>
 );
 
+const LOADING_TEXT = 'Loading';
+
+const SUCCESS_TEXT = 'Success';
+
+const ERROR_TEXT = 'Error';
+
+const BUTTON_STATE = {
+  success: 'success',
+  error: 'error',
+  loading: 'loading',
+  idle: 'idle',
+};
+
 const ReactiveButton = (props) => {
   const color = props.color ? props.color : 'primary';
 
@@ -64,21 +77,21 @@ const ReactiveButton = (props) => {
   const loadingText =
     props.loadingText && props.loadingText !== ''
       ? props.loadingText
-      : 'Loading';
+      : LOADING_TEXT;
 
   const successText =
     props.successText && props.successText !== ''
       ? props.successText
-      : 'Success';
+      : SUCCESS_TEXT;
 
   const errorText =
-    props.errorText && props.errorText !== '' ? props.errorText : 'Error';
+    props.errorText && props.errorText !== '' ? props.errorText : ERROR_TEXT;
 
   const type = props.type ? props.type : 'button';
 
   const className = `reactive-btn${
     props.className ? ' ' + props.className : ''
-  }`;
+    }`;
 
   const outline = props.outline ? true : false;
 
@@ -96,7 +109,7 @@ const ReactiveButton = (props) => {
       : true;
 
   const [buttonState, setButtonState] = useState(
-    props.buttonState ? props.buttonState : 'idle'
+    props.buttonState ? props.buttonState : BUTTON_STATE.idle
   );
 
   const onClickHandler = () => {
@@ -108,10 +121,10 @@ const ReactiveButton = (props) => {
   useEffect(() => {
     if (typeof props.buttonState !== 'undefined') {
       setButtonState(props.buttonState);
-      if (props.buttonState === 'success' || props.buttonState === 'error') {
+      if (props.buttonState === BUTTON_STATE.success || props.buttonState === BUTTON_STATE.error) {
         setTimeout(
           () => {
-            setButtonState('idle');
+            setButtonState(BUTTON_STATE.idle);
           },
           props.messageDuration ? props.messageDuration : 2000
         );
@@ -120,26 +133,26 @@ const ReactiveButton = (props) => {
   }, [props.buttonState, props.messageDuration]);
 
   const getButtonText = (currentButtonState) => {
-    if (currentButtonState === 'idle') {
+    if (currentButtonState === BUTTON_STATE.idle) {
       return idleText;
-    } else if (currentButtonState === 'loading') {
-      return loadingText === 'Loading' ? (
+    } else if (currentButtonState === BUTTON_STATE.loading) {
+      return loadingText === LOADING_TEXT ? (
         <React.Fragment>
           {loadingIcon} {loadingText}
         </React.Fragment>
       ) : (
         loadingText
       );
-    } else if (currentButtonState === 'success') {
-      return successText === 'Success' ? (
+    } else if (currentButtonState === BUTTON_STATE.success) {
+      return successText === SUCCESS_TEXT ? (
         <React.Fragment>
           {successIcon} {successText}
         </React.Fragment>
       ) : (
         successText
       );
-    } else if (currentButtonState === 'error') {
-      return errorText === 'Error' ? (
+    } else if (currentButtonState === BUTTON_STATE.error) {
+      return errorText === ERROR_TEXT ? (
         <React.Fragment>
           {errorIcon} {errorText}
         </React.Fragment>
@@ -157,14 +170,14 @@ const ReactiveButton = (props) => {
       >
         <button
           ref={typeof props.buttonRef !== 'undefined' ? props.buttonRef : null}
-          disabled={buttonState !== 'idle' || props.disabled}
+          disabled={buttonState !== BUTTON_STATE.idle || props.disabled}
           data-button-state={buttonState}
           type={type}
           className={`${className} ${color}${outline ? ' outline' : ''}${
             !animation ? ' no-animation' : ''
-          }${rounded ? ' rounded' : ''}${shadow ? ' shadow' : ''}${
-            props.disabled ? ' disabled' : ''
-          }`}
+            }${rounded ? ' rounded' : ''}${shadow ? ' shadow' : ''}${
+              props.disabled ? ' disabled' : ''
+            }`}
           onClick={onClickHandler}
           style={style}
         >
