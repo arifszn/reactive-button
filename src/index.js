@@ -99,9 +99,9 @@ const ReactiveButton = (props) => {
     props.buttonState ? props.buttonState : 'idle'
   );
 
-  const onClickHandler = () => {
+  const onClickHandler = (event) => {
     if (typeof props.onClick !== 'undefined') {
-      props.onClick();
+      props.onClick(event);
     }
   };
 
